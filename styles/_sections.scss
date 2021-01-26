@@ -1,0 +1,138 @@
+@import 'theme';
+
+.header {
+  position: sticky;
+}
+
+.contact {
+  background-color: $background;
+  padding: 0.65em 0;
+
+  &__container {
+    width: 95%;
+  }
+  &__email-wrapper::after {
+    content: ' ';
+    position: relative;
+    left: 10px;
+    width: 0.5px;
+    background: white;
+    height: 22px;
+  }
+  &__content {
+    &-wrapper {
+      display: inline-flex;
+      align-items: center;
+      &--phone {
+        margin-left: 1em;
+      }
+
+      &--linkedin {
+        margin-left: auto;
+      }
+    }
+  }
+  &__text {
+    color: white;
+    font-size: 0.6875rem;
+  }
+  &__link-wrapper {
+    display: flex;
+  }
+}
+
+.navbar {
+  padding: 1.75em 0;
+  &__logo {
+    width: 50%;
+  }
+
+  &__hamburger {
+    margin-left: auto;
+    position: relative;
+    &::before {
+      display: inline-flex;
+      content: ' ';
+      position: relative;
+      right: 7px;
+      width: 2px;
+      background: $background;
+      height: 36px;
+    }
+  }
+  &__links {
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    // padding: 0 0.85em;
+    margin-top: 1.5em;
+    box-shadow: 0 3.5px #0000001a;
+    height: 0;
+    transition: all 0.5s ease;
+
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+      height: 220px;
+    }
+  }
+  &__item {
+    padding: 0.45em 0.85em;
+    &:hover:active {
+      background: $background;
+    }
+    &:hover:active > &__link {
+      color: white;
+    }
+  }
+}
+
+.hero {
+  background-image: url(/assets/Header.png);
+  background-size: cover;
+  padding: 3em 0;
+
+  .hero__heading {
+    width: min-content;
+    color: white;
+    font-weight: 900;
+    line-height: 1.1;
+    font-size: 3rem;
+    padding-bottom: 0.7rem;
+    margin: 0 auto;
+    border-bottom: 1px solid white;
+  }
+
+  .hero__text {
+    color: white;
+    margin-top: 1em;
+  }
+
+  &__container {
+    text-align: center;
+  }
+}
+
+.section-two {
+  padding: 1em 0;
+  text-align: center;
+
+  &__item {
+    margin: 1em 0;
+  }
+  &__item + &__item {
+    margin-top: 1.75em;
+    border-top: 1px solid $stroke;
+    padding-top: 1em;
+  }
+  &__img {
+    width: 22%;
+  }
+  &__text {
+    text-transform: uppercase;
+    width: 70%;
+    margin-left: auto;
+  }
+}

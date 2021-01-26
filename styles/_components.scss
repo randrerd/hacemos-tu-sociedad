@@ -1,0 +1,40 @@
+.container {
+  width: 87%;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  // justify-content: space-between;
+}
+.col {
+  position: relative;
+}
+
+// .col + .col {
+//   margin-left: 1.5em;
+// }
+
+.iconify {
+  margin-right: 0.3em;
+
+  &.linkedin-icon {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+  &.hamburger-menu {
+    font-size: 2.5rem;
+    margin-right: 0;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  margin-top: 2rem;
+  background-color: $accent;
+  padding: 0.75rem 1rem;
+  color: white;
+  border-radius: 25px;
+}
