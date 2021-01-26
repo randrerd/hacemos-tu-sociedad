@@ -1,14 +1,16 @@
 .container {
-  width: 87%;
   margin: 0 auto;
   max-width: 1100px;
+  width: 87%;
 }
+
 .row {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   // justify-content: space-between;
 }
+
 .col {
   position: relative;
 }
@@ -21,9 +23,10 @@
   margin-right: 0.3em;
 
   &.linkedin-icon {
-    margin: 0;
     font-size: 1.4rem;
+    margin: 0;
   }
+
   &.hamburger-menu {
     font-size: 2.5rem;
     margin-right: 0;
@@ -31,10 +34,15 @@
 }
 
 .btn {
-  display: inline-flex;
-  margin-top: 2rem;
   background-color: $accent;
-  padding: 0.75rem 1rem;
-  color: white;
   border-radius: 25px;
+  color: #fff;
+  display: inline-flex;
+  padding: 0.75rem 1rem;
+  font-weight: 400;
+  &:hover,
+  &:active {
+    background-color: #fff;
+    color: $background;
+  }
 }

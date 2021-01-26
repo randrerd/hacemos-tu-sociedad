@@ -8,3 +8,8 @@ body {
   font-family: 'Roboto', 'Arial', sans-serif;
   color: $primary;
 }
+@media (min-width: 650px) {
+  html {
+    font-size: 18px;
+  }
+}
