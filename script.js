@@ -8,8 +8,6 @@ const DOM = (() => {
     '.section-four__list__item'
   );
 
-  let isArrowDown = false;
-
   //Event listeners
   hamburgerBars.addEventListener('click', () => handleHamburgerBars());
   sectionFourDropdownItems.forEach((elem, i) => {
@@ -25,13 +23,14 @@ const DOM = (() => {
       `.section-four__list__item[data-index='${i}']`
     );
     const arrowIcon = listItemContainer.children[0].children[1];
+    const isArrowDown = arrowIcon.classList.contains('rotate');
 
     if (!isArrowDown) {
       arrowIcon.style.transform = 'rotate(450deg)';
-      isArrowDown = true;
     } else {
       arrowIcon.style.transform = 'rotate(360deg)';
-      isArrowDown = false;
     }
+
+    arrowIcon.classList.toggle('rotate');
   };
 })();

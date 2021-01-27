@@ -129,13 +129,10 @@
   padding: 3.5em 0;
   text-align: center;
 
-  &__item {
-    margin: 1em 0;
-  }
   &__item + &__item {
     margin-top: 1.75em;
     border-top: 1px solid $stroke;
-    padding-top: 1em;
+    padding-top: 2em;
   }
   &__img {
     width: 22%;
