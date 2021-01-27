@@ -5,6 +5,6 @@ module.exports = {
     require('postcss-partial-import')({ prefix: '_', extension: '.scss' }),
     require('postcss-nested'),
     require('postcss-simple-vars'),
-    require('autoprefixer'),
+    require('postcss-preset-env'),
   ],
 };

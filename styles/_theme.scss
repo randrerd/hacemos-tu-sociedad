@@ -3,15 +3,29 @@ $primary: #585858;
 $accent: #8666ee;
 $background: #222551;
 $stroke: #707070;
+
+$md: 620px;
+
 html {
   font-size: 16px;
+  @media (min-width: $md) {
+    font-size: 20px;
+  }
 }
+
 body {
   font-family: 'Roboto', 'Arial', sans-serif;
   color: $primary;
 }
-@media (min-width: 650px) {
-  html {
-    font-size: 18px;
-  }
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.1;
+}
+
+a,
+p {
+  line-height: 1.5;
 }

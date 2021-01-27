@@ -8,7 +8,6 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  // justify-content: space-between;
 }
 
 .col {
@@ -35,7 +34,7 @@
   }
 
   &--arrowdown {
-    transition: all 1s;
+    transition: all 0.35s;
     color: $accent;
     margin-left: auto;
   }

@@ -75,13 +75,13 @@
     // padding: 0 0.85em;
     margin-top: 1.5em;
     box-shadow: 0 3.5px #0000001a;
-    height: 0;
+    max-height: 0;
     transition: all 0.5s ease;
 
     &.visible {
       opacity: 1;
       visibility: visible;
-      height: 220px;
+      max-height: 300px;
     }
   }
   &__item {
@@ -95,10 +95,12 @@
   }
 }
 
-.hero {
-  background: no-repeat center/cover url('../assets/Header.png');
+.section-hero {
+  background: no-repeat center/cover url(../assets/Header.png),
+    linear-gradient(90deg, #304c5b 0%, #3a494e 25%, #364044 50%, #3b4e58 75%);
   background-size: cover;
   padding: 3em 0;
+  transition: all 0.5s ease-in-out;
 
   &__heading {
     width: min-content;
@@ -113,6 +115,8 @@
 
   &__text {
     color: #fff;
+    width: 75%;
+    margin: 0 auto;
     margin-top: 1em;
   }
 
@@ -189,7 +193,8 @@
 }
 
 .section-four {
-  background: no-repeat top/cover url('../assets/section-four-img.png');
+  background: no-repeat center/cover url('../assets/section-four-img.png'),
+    linear-gradient(90deg, #b4a392 0%, #ab9688 25%, #d1c3bb 50%, #d3c9c3 75%);
   padding: 3.5em 0;
 
   &__heading {
@@ -206,10 +211,14 @@
     padding: 1em;
     border-radius: 25px;
 
+    &__dropdown {
+      border-bottom: 2px solid $accent;
+      padding-bottom: 0.5em;
+    }
+
     &__item {
       padding-bottom: 1em;
       margin: 0.85em 0;
-      border-bottom: 2px solid $accent;
     }
 
     &__heading {
@@ -221,8 +230,29 @@
 
   &__dropdown {
     &-content {
-      display: none;
+      position: relative;
+      visibility: hidden;
+      max-height: 0px;
+      transition: all 0.5s ease;
+      overflow: hidden;
+
+      &.show {
+        max-height: 700px;
+        visibility: visible;
+        transition: all 0.5s ease-in;
+      }
     }
+    &-text {
+      padding: 0 0.5em;
+      margin-top: 0.35em;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 2em;
   }
 
   &__img {
