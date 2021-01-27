@@ -56,6 +56,9 @@ fieldset {
   padding: 0;
   margin: 0;
 }
+html {
+  font-size: 16px;
+}
 body {
   font-family: 'Roboto', 'Arial', sans-serif;
   color: #585858;
@@ -200,9 +203,9 @@ body {
       color: #fff;
     }
 .hero {
-  background-image: url('../assets/Header.png');
+  background: no-repeat center/cover url('../assets/Header.png');
   background-size: cover;
-  padding: 3em;
+  padding: 3em 0;
 }
 .hero__heading {
     width: -webkit-min-content;

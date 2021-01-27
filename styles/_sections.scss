@@ -96,9 +96,9 @@
 }
 
 .hero {
-  background-image: url('../assets/Header.png');
+  background: no-repeat center/cover url('../assets/Header.png');
   background-size: cover;
-  padding: 3em;
+  padding: 3em 0;
 
   &__heading {
     width: min-content;
