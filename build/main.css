@@ -84,14 +84,21 @@ body {
 // }
 .iconify {
   margin-right: 0.3em;
+  color: #fff;
 }
-.iconify.linkedin-icon {
+.iconify--linkedin {
     font-size: 1.4rem;
     margin: 0;
   }
-.iconify.hamburger-menu {
+.iconify--hamburger-menu {
+    color: #222551;
     font-size: 2.5rem;
     margin-right: 0;
+  }
+.iconify--arrowdown {
+    transition: all 1s;
+    color: #8666ee;
+    margin-left: auto;
   }
 .btn {
   background-color: #8666ee;
@@ -110,6 +117,7 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 30;
 }
 .contact {
   background-color: #222551;
@@ -146,7 +154,6 @@ body {
 .navbar {
   background-color: #fff;
   padding: 1.75em 0;
-  z-index: 2000;
 }
 .navbar__logo {
     width: 50%;
@@ -220,7 +227,7 @@ body {
     text-align: center;
   }
 .section-two {
-  padding: 1em 0;
+  padding: 3.5em 0;
   text-align: center;
 }
 .section-two__item {
@@ -242,7 +249,7 @@ body {
   }
 .section-three {
   background-color: #222551;
-  padding: 3.5rem 0;
+  padding: 3.5em 0;
 }
 .section-three__heading {
     font-size: 2rem;
@@ -278,4 +285,39 @@ body {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+  }
+.section-four {
+  background: no-repeat top/cover url('../assets/section-four-img.png');
+  padding: 3.5em 0;
+}
+.section-four__heading {
+    color: #222551;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+.section-four__list {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 25px;
+  }
+.section-four__list__item {
+      padding-bottom: 1em;
+      margin: 0.85em 0;
+      border-bottom: 2px solid #8666ee;
+    }
+.section-four__list__heading {
+      color: #222551;
+      font-weight: 500;
+      width: 60%;
+    }
+.section-four__dropdown-content {
+      display: none;
+    }
+.section-four__img {
+    display: none;
+    position: absolute;
+    filter: opacity(20%);
   }

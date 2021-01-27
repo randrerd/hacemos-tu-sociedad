@@ -3,6 +3,7 @@
 .header {
   position: sticky;
   top: 0;
+  z-index: 30;
 }
 
 .contact {
@@ -45,7 +46,6 @@
 .navbar {
   background-color: #fff;
   padding: 1.75em 0;
-  z-index: 2000;
 
   &__logo {
     width: 50%;
@@ -126,7 +126,7 @@
 }
 
 .section-two {
-  padding: 1em 0;
+  padding: 3.5em 0;
   text-align: center;
 
   &__item {
@@ -150,7 +150,7 @@
 
 .section-three {
   background-color: $background;
-  padding: 3.5rem 0;
+  padding: 3.5em 0;
 
   &__heading {
     font-size: 2rem;
@@ -188,5 +188,49 @@
     margin: 0 auto;
     display: block;
     width: fit-content;
+  }
+}
+
+.section-four {
+  background: no-repeat top/cover url('../assets/section-four-img.png');
+  padding: 3.5em 0;
+
+  &__heading {
+    color: $background;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+
+  &__list {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 25px;
+
+    &__item {
+      padding-bottom: 1em;
+      margin: 0.85em 0;
+      border-bottom: 2px solid $accent;
+    }
+
+    &__heading {
+      color: $background;
+      font-weight: 500;
+      width: 60%;
+    }
+  }
+
+  &__dropdown {
+    &-content {
+      display: none;
+    }
+  }
+
+  &__img {
+    display: none;
+    position: absolute;
+    filter: opacity(20%);
   }
 }

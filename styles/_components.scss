@@ -21,15 +21,23 @@
 
 .iconify {
   margin-right: 0.3em;
+  color: #fff;
 
-  &.linkedin-icon {
+  &--linkedin {
     font-size: 1.4rem;
     margin: 0;
   }
 
-  &.hamburger-menu {
+  &--hamburger-menu {
+    color: $background;
     font-size: 2.5rem;
     margin-right: 0;
+  }
+
+  &--arrowdown {
+    transition: all 1s;
+    color: $accent;
+    margin-left: auto;
   }
 }
 

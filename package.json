@@ -16,7 +16,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "css": "postcss styles/main.scss -o build/main.css —no-map —verbose -w"
+    "css": "postcss styles/main.scss -o build/main.css —no-map --verbose --watch"
   },
   "repository": {
     "type": "git",
