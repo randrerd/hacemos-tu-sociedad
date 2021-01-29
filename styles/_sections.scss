@@ -287,7 +287,7 @@
     margin-top: 3em;
     width: 70%;
     opacity: 0.1;
-    filter: blur(2px);
+    // filter: blur(2px);
   }
 
   &__list {
@@ -352,5 +352,63 @@
     color: $primary;
     font-weight: 600;
     font-size: 1.5em;
+  }
+}
+
+.section--contact {
+  @extend .section;
+
+  &__heading {
+    color: $background;
+  }
+
+  &__info {
+    &__name {
+      display: block;
+      font-weight: 600;
+      color: $background;
+      margin-bottom: 1em;
+    }
+
+    &__description {
+      margin-bottom: 1em;
+    }
+
+    &__anchor {
+      font-weight: 600;
+    }
+  }
+
+  &__form {
+    margin: 1.5em auto;
+    &__col {
+      width: 100%;
+    }
+    &__input {
+      padding-bottom: 0.5em;
+      margin-bottom: 1em;
+      border-bottom: 3px solid $accent;
+      width: 70%;
+
+      &-wrapper {
+        position: relative;
+
+        &--textarea {
+          margin-top: 1em;
+        }
+      }
+
+      &__label {
+        margin-top: 0.25em;
+        position: absolute;
+        left: 7.5px;
+        font-weight: 600;
+      }
+    }
+
+    &__textarea {
+      border: 1px solid $accent;
+      width: 95%;
+    }
   }
 }

@@ -54,6 +54,13 @@
     color: $accent;
     margin-left: auto;
   }
+
+  &--whatsapp--contact {
+    color: $accent;
+  }
+  &--envelope--contact {
+    color: $accent;
+  }
 }
 
 .btn {
@@ -77,5 +84,11 @@
     width: max-content;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  &--submit-form {
+    @extend .btn;
+    display: block;
+    margin-left: auto;
   }
 }

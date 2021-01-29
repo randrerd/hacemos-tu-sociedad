@@ -28,7 +28,6 @@
             ></span>
             <a
               href="mailto:gestionesmpm@outlook.com.ar"
-              class="text-white my-auto"
               aria-label="correo electronico"
               rel="noreferrer noopener"
             >
@@ -47,7 +46,6 @@
             <a
               aria-label="Numero de telefono"
               href="phone"
-              class="text-white m-0"
               rel="noreferrer noopener"
             >
               <p class="contact__text">(15) 317260</p>
@@ -583,6 +581,138 @@
         rel="noopener noreferrer"
         >Ver más...</a
       >
+    </section>
+
+    <!-- CONTACT SECTION -->
+
+    <section class="section--contact">
+      <div class="container">
+        <h2 class="heading--secondary section--contact__heading">Contacto</h2>
+        <div class="row">
+          <div class="col section--contact__info">
+            <em class="section--contact__info__name"
+              >Dra. Maricel Paula Marcos</em
+            >
+            <p class="section--contact__info__description">
+              Abogada UBA con Orientación Derecho Notarial <br />
+              6 años de experiencia en inscripciones societarias
+              <br />
+              Trámites ante la Inspección General de Justicia
+            </p>
+
+            <div class="row section--contact__email">
+              <span
+                class="iconify iconify--envelope--contact"
+                data-icon="fa-solid:envelope"
+                data-inline="false"
+              ></span>
+              <a
+                href="mailto:gestionesmpm@outlook.com.ar"
+                aria-label="correo electronico"
+                rel="noreferrer noopener"
+                class="section--contact__info__anchor"
+              >
+                gestionesmpm@outlook.com.ar
+              </a>
+            </div>
+
+            <div class="row section--contact__phone">
+              <span
+                class="iconify iconify--whatsapp--contact"
+                data-icon="dashicons:whatsapp"
+                data-inline="false"
+              ></span>
+              <a
+                aria-label="Numero de telefono"
+                href="phone"
+                rel="noreferrer noopener"
+                class="section--contact__info__anchor"
+              >
+                (15) 317260
+              </a>
+            </div>
+          </div>
+
+          <form action="#" class="col section--contact__form">
+            <div class="row section--contact__form__row">
+              <div class="col section--contact__form__col">
+                <div class="section--contact__form__input-wrapper">
+                  <input
+                    type="text"
+                    class="section--contact__form__input"
+                    name="name"
+                    id="form__name"
+                  />
+                  <label
+                    class="section--contact__form__input__label"
+                    for="form__name"
+                    >Nombre</label
+                  >
+                </div>
+                <div class="section--contact__form__input-wrapper">
+                  <input
+                    type="text"
+                    class="section--contact__form__input"
+                    name="email"
+                    id="form__email"
+                  />
+                  <label
+                    class="section--contact__form__input__label"
+                    for="form__email"
+                    >E-mail</label
+                  >
+                </div>
+              </div>
+
+              <div class="col section--contact__form__col">
+                <div class="section--contact__form__input-wrapper">
+                  <input
+                    type="text"
+                    class="section--contact__form__input"
+                    name="last-name"
+                    id="form__last-name"
+                  />
+                  <label
+                    class="section--contact__form__input__label"
+                    for="form__last-name"
+                    >Apellido</label
+                  >
+                </div>
+                <div class="section--contact__form__input-wrapper">
+                  <input
+                    type="text"
+                    class="section--contact__form__input"
+                    name="phone"
+                    id="form__phone"
+                  />
+                  <label
+                    class="section--contact__form__input__label"
+                    for="form__phone"
+                    >Teléfono</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="section--contact__form__input-wrapper--textarea">
+              <textarea
+                class="section--contact__form__textarea"
+                name="message"
+                id="form__msg"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <label
+                class="section--contact__form__input__label"
+                for="form__msg"
+                >Mensaje</label
+              >
+            </div>
+
+            <input class="btn--submit-form" type="button" value="Enviar" />
+          </form>
+        </div>
+      </div>
     </section>
     <script src="script.js"></script>
   </body>

@@ -9,6 +9,17 @@ body {
   margin: 0;
   padding: 0;
 }
+
+input,
+textarea {
+  border: none;
+  appearance: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
 a {
   text-decoration: none;
   color: inherit;

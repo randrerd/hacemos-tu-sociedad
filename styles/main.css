@@ -12,6 +12,17 @@ body {
   padding: 0;
 }
 
+input,
+textarea {
+  border: none;
+  appearance: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -100,7 +111,7 @@ p {
   width: 87%;
 }
 
-.section, .section--blog, .section--six, .section--faq, .section--four, .section--three, .section--two, .section--hero {
+.section, .section--contact, .section--blog, .section--six, .section--faq, .section--four, .section--three, .section--two, .section--hero {
   padding: 3.5em 0;
 }
 
@@ -140,8 +151,14 @@ p {
   color: #8666ee;
   margin-left: auto;
 }
+.iconify--whatsapp--contact {
+  color: #8666ee;
+}
+.iconify--envelope--contact {
+  color: #8666ee;
+}
 
-.btn, .btn--center {
+.btn, .btn--submit-form, .btn--center {
   background-color: #8666ee;
   border-radius: 25px;
   color: #fff;
@@ -150,7 +167,7 @@ p {
   font-weight: 400;
   margin-top: 2em;
 }
-.btn:hover, .btn--center:hover, .btn:active, .btn--center:active {
+.btn:hover, .btn--submit-form:hover, .btn--center:hover, .btn:active, .btn--submit-form:active, .btn--center:active {
   background-color: #fff;
   color: #222551;
 }
@@ -159,6 +176,10 @@ p {
   width: max-content;
   margin-left: auto;
   margin-right: auto;
+}
+.btn--submit-form {
+  display: block;
+  margin-left: auto;
 }
 
 html {
@@ -435,7 +456,6 @@ p {
   margin-top: 3em;
   width: 70%;
   opacity: 0.1;
-  filter: blur(2px);
 }
 .section--six__list {
   padding: 0 1em;
@@ -489,6 +509,50 @@ p {
   color: #585858;
   font-weight: 600;
   font-size: 1.5em;
+}
+
+.section--contact__heading {
+  color: #222551;
+}
+.section--contact__info__name {
+  display: block;
+  font-weight: 600;
+  color: #222551;
+  margin-bottom: 1em;
+}
+.section--contact__info__description {
+  margin-bottom: 1em;
+}
+.section--contact__info__anchor {
+  font-weight: 600;
+}
+.section--contact__form {
+  margin: 1.5em auto;
+}
+.section--contact__form__col {
+  width: 100%;
+}
+.section--contact__form__input {
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  border-bottom: 3px solid #8666ee;
+  width: 70%;
+}
+.section--contact__form__input-wrapper {
+  position: relative;
+}
+.section--contact__form__input-wrapper--textarea {
+  margin-top: 1em;
+}
+.section--contact__form__input__label {
+  margin-top: 0.25em;
+  position: absolute;
+  left: 7.5px;
+  font-weight: 600;
+}
+.section--contact__form__textarea {
+  border: 1px solid #8666ee;
+  width: 95%;
 }
 
 /*# sourceMappingURL=main.css.map */
