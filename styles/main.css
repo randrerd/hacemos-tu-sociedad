@@ -156,8 +156,6 @@ p {
 }
 .btn--center {
   display: block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   margin-left: auto;
   margin-right: auto;
@@ -190,7 +188,6 @@ p {
 }
 
 .header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 30;
@@ -258,7 +255,7 @@ p {
   position: absolute;
   width: 100%;
   margin-top: 1.5em;
-  box-shadow: 0 3.5px rgba(0,0,0,0.10196);
+  box-shadow: 0 3.5px #0000001a;
   max-height: 0;
   transition: all 0.5s ease;
 }
@@ -283,8 +280,6 @@ p {
   transition: all 0.5s ease-in-out;
 }
 .section--hero__heading {
-  width: -webkit-min-content;
-  width: -moz-min-content;
   width: min-content;
   color: #fff;
   font-weight: 900;
@@ -397,8 +392,7 @@ p {
 
 .section--faq {
   background: no-repeat center/cover url(../assets/section-faq-bg.png);
-  -webkit-backdrop-filter: hue-rotate(225deg);
-          backdrop-filter: hue-rotate(225deg);
+  backdrop-filter: hue-rotate(225deg);
 }
 .section--faq__container {
   text-align: center;

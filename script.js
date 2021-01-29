@@ -5,7 +5,7 @@ const DOM = (() => {
   const hamburgerBars = document.querySelector('.navbar__hamburger');
   const dropdownMenu = document.querySelector('.navbar__links');
   const sectionFourListItems = document.querySelectorAll(
-    '.section-four__list__item'
+    '.section--four__list__item'
   );
 
   //Event listeners
@@ -20,7 +20,7 @@ const DOM = (() => {
 
   const handleDropdownItem = (index) => {
     const listItemContainer = document.querySelector(
-      `.section-four__list__item[data-index='${index}']`
+      `.section--four__list__item[data-index='${index}']`
     );
     const arrowIcon = listItemContainer.children[0].children[1];
     const contentContainer = listItemContainer.children[1];
