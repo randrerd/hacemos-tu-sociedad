@@ -634,10 +634,11 @@
           </div>
 
           <form action="#" class="col section--contact__form">
-            <div class="row section--contact__form__row">
-              <div class="col section--contact__form__col">
-                <div class="section--contact__form__input-wrapper">
+            <div class="section--contact__form1">
+              <div class="row section--contact__form__row">
+                <div class="col section--contact__form__input-wrapper">
                   <input
+                    required
                     type="text"
                     class="section--contact__form__input"
                     name="name"
@@ -649,8 +650,27 @@
                     >Nombre</label
                   >
                 </div>
-                <div class="section--contact__form__input-wrapper">
+                <div class="col section--contact__form__input-wrapper">
                   <input
+                    required
+                    type="text"
+                    class="section--contact__form__input"
+                    name="last-name"
+                    id="form__last-name"
+                  />
+                  <label
+                    required
+                    class="section--contact__form__input__label"
+                    for="form__last-name"
+                    >Apellido</label
+                  >
+                </div>
+              </div>
+
+              <div class="row section--contact__form__row">
+                <div class="col section--contact__form__input-wrapper">
+                  <input
+                    required
                     type="text"
                     class="section--contact__form__input"
                     name="email"
@@ -662,24 +682,10 @@
                     >E-mail</label
                   >
                 </div>
-              </div>
 
-              <div class="col section--contact__form__col">
-                <div class="section--contact__form__input-wrapper">
+                <div class="col section--contact__form__input-wrapper">
                   <input
-                    type="text"
-                    class="section--contact__form__input"
-                    name="last-name"
-                    id="form__last-name"
-                  />
-                  <label
-                    class="section--contact__form__input__label"
-                    for="form__last-name"
-                    >Apellido</label
-                  >
-                </div>
-                <div class="section--contact__form__input-wrapper">
-                  <input
+                    required
                     type="text"
                     class="section--contact__form__input"
                     name="phone"
@@ -696,6 +702,7 @@
 
             <div class="section--contact__form__input-wrapper--textarea">
               <textarea
+                required
                 class="section--contact__form__textarea"
                 name="message"
                 id="form__msg"
@@ -714,6 +721,64 @@
         </div>
       </div>
     </section>
+
+    <!-- FOOTER -->
+    <footer class="section--footer">
+      <div class="container row">
+        <img
+          class="col section--footer__col section--footer__img"
+          src="assets/Logo.svg"
+          alt="Hacemos tu sociedad"
+        />
+
+        <ul class="section--footer__col">
+          <li class="section--footer__item"><a href="#">Inicio</a></li>
+          <li class="section--footer__item">
+            <a href="#services">Servicios</a>
+          </li>
+        </ul>
+
+        <ul class="section--footer__col">
+          <li class="section--footer__item">
+            <a href="#steps">Armá tu sociedad</a>
+          </li>
+          <li class="section--footer__item">
+            <a href="#faq">Preguntas frecuentes</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col section--footer__col">
+        <ul class="section--footer__col">
+          <li class="section--footer__item"><a href="#blog">Blog</a></li>
+          <li class="section--footer__item">
+            <a href="#contact">Contacto</a>
+          </li>
+        </ul>
+
+        <ul class="section--footer__col row">
+          <li class="col section--footer__item">
+            <a href="#"
+              ><span
+                class="iconify iconify--footer"
+                data-icon="entypo-social:linkedin-with-circle"
+                data-inline="false"
+                style="color: #fff"
+              ></span
+            ></a>
+          </li>
+          <li class="col section--footer__item">
+            <a href="#services">
+              <span
+                class="iconify iconify--footer"
+                data-icon="dashicons:whatsapp"
+                data-inline="false"
+                style="color: #fff"
+              ></span
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

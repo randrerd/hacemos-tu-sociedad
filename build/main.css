@@ -113,7 +113,7 @@ p {
   width: 87%;
 }
 
-.section, .section--contact, .section--blog, .section--six, .section--faq, .section--four, .section--three, .section--two, .section--hero {
+.section, .section--footer, .section--contact, .section--blog, .section--six, .section--faq, .section--four, .section--three, .section--two, .section--hero {
   padding: 3.5em 0;
 }
 
@@ -138,6 +138,10 @@ p {
 .iconify {
   margin-right: 0.3em;
   color: #fff;
+}
+.iconify--footer {
+  font-size: 1.5rem;
+  margin: 0 auto;
 }
 .iconify--linkedin {
   font-size: 1.4rem;
@@ -522,6 +526,9 @@ p {
 .section--contact__heading {
   color: #222551;
 }
+.section--contact__info {
+  margin-bottom: 0.5em;
+}
 .section--contact__info__name {
   display: block;
   font-weight: 600;
@@ -540,27 +547,53 @@ p {
 .section--contact__form__col {
   width: 100%;
 }
-.section--contact__form__input {
+.section--contact__form__input, .section--contact__form__textarea {
   padding-bottom: 0.5em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   border-bottom: 3px solid #8666ee;
   width: 70%;
 }
-.section--contact__form__input-wrapper {
+.section--contact__form__input-wrapper, .section--contact__form__input-wrapper--textarea {
   position: relative;
+  width: 100%;
 }
 .section--contact__form__input-wrapper--textarea {
   margin-top: 1em;
+  position: relative;
 }
 .section--contact__form__input__label {
   margin-top: 0.25em;
   position: absolute;
   left: 7.5px;
   font-weight: 600;
+  transition: all 0.2s linear;
+  top: 0;
+}
+.section--contact__form__input:valid ~ .section--contact__form__input__label, .section--contact__form__textarea:valid ~ .section--contact__form__input__label, .section--contact__form__input:focus ~ .section--contact__form__input__label, .section--contact__form__textarea:focus ~ .section--contact__form__input__label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  left: 1px;
+  top: -1.2rem;
+  transition: all 0.2s linear;
 }
 .section--contact__form__textarea {
   border: 1px solid #8666ee;
   width: 95%;
+}
+.section--contact__form__textarea:valid ~ .section--contact__form__input__label, .section--contact__form__textarea:focus ~ .section--contact__form__input__label {
+  top: -1.5rem;
+}
+
+.section--footer {
+  background: #222551;
+  color: #fff;
+  text-align: center;
+}
+.section--footer__col {
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 0.5em;
 }
 
 /*# sourceMappingURL=main.css.map */
