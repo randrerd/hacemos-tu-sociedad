@@ -39,31 +39,37 @@
   color: #fff;
 
   &--footer {
+    @extend .iconify;
     font-size: 1.5rem;
     margin: 0 auto;
   }
 
   &--linkedin {
+    @extend .iconify;
     font-size: 1.4rem;
     margin: 0;
   }
 
   &--hamburger-menu {
+    @extend .iconify;
     color: $background;
     font-size: 2.5rem;
     margin-right: 0;
   }
 
   &--arrowdown {
+    @extend .iconify;
     transition: all 0.35s;
     color: $accent;
     margin-left: auto;
   }
 
   &--whatsapp--contact {
+    @extend .iconify;
     color: $accent;
   }
   &--envelope--contact {
+    @extend .iconify;
     color: $accent;
   }
 }
@@ -73,7 +79,7 @@
   border-radius: 25px;
   color: #fff;
   display: inline-flex;
-  padding: 0.75rem 1rem;
+  padding: 1em 1.5em;
   font-weight: 400;
   margin-top: 2em;
 

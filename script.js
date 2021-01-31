@@ -7,12 +7,17 @@ const DOM = (() => {
   const sectionFourListItems = document.querySelectorAll(
     '.section--four__list__item'
   );
+  const headerContainer = document.querySelector('.header');
+  const navbarContainer = document.querySelector('.navbar');
+  let prevScrollpos = window.pageYOffset;
 
   //Event listeners
   hamburgerBars.addEventListener('click', () => handleHamburgerBars());
   sectionFourListItems.forEach((elem, index) => {
     elem.addEventListener('click', () => handleDropdownItem(index));
   });
+  window.addEventListener('scroll', () => handleNavbarScroll());
+  dropdownMenu.addEventListener('click', (e) => handleDropdownMenu(e.target));
 
   const handleHamburgerBars = () => {
     dropdownMenu.classList.toggle('visible');
@@ -24,6 +29,7 @@ const DOM = (() => {
     );
     const arrowIcon = listItemContainer.children[0].children[1];
     const contentContainer = listItemContainer.children[1];
+    const prevScrollpos = window.pageYOffset;
 
     const isContentContainerDown = contentContainer.classList.contains('show');
 
@@ -59,6 +65,30 @@ const DOM = (() => {
       }
     } catch (err) {
       console.log(err);
+    }
+  };
+
+  const handleNavbarScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      headerContainer.style.top = '0';
+      navbarContainer.style.top = '0';
+    } else {
+      headerContainer.style.top = '-50px';
+      navbarContainer.style.top = '-150px';
+      dropdownMenu.classList.remove('visible');
+    }
+    prevScrollpos = currentScrollPos;
+  };
+
+  const handleDropdownMenu = (target) => {
+    const isHomeLink = target.attributes[0].value === '#';
+
+    if (isHomeLink) {
+      dropdownMenu.classList.remove('visible');
+    } else {
+      headerContainer.style.top = '-50px';
+      navbarContainer.style.top = '-150px';
     }
   };
 })();

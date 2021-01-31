@@ -4,6 +4,7 @@
   position: sticky;
   top: 0;
   z-index: 30;
+  transition: all 0.25s linear;
 }
 
 .contact {
@@ -26,10 +27,12 @@
       display: inline-flex;
       align-items: center;
       &--phone {
+        @extend .contact__content-wrapper;
         margin-left: 1em;
       }
 
       &--linkedin {
+        @extend .contact__content-wrapper;
         margin-left: auto;
       }
     }
@@ -46,6 +49,8 @@
 .navbar {
   background-color: #fff;
   padding: 1.75em 0;
+  position: relative;
+  transition: all 0.25s linear;
 
   &__logo {
     width: 50%;
@@ -86,6 +91,11 @@
   }
   &__item {
     padding: 0.45em 0.85em;
+
+    &__link {
+      display: block;
+      width: 100%;
+    }
     &:hover:active {
       background: $background;
     }

@@ -5,6 +5,7 @@
   font-style: normal;
   text-decoration: none;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -20,11 +21,14 @@ input:focus,
 textarea:focus {
   outline: none;
 }
+
 a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
 button {
   background-color: transparent;
   color: inherit;
@@ -32,14 +36,17 @@ button {
   padding: 0;
   cursor: pointer;
 }
+
 figure {
   margin: 0;
 }
+
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
   margin: 0;
 }
+
 ul,
 ol,
 dd {
@@ -47,6 +54,7 @@ dd {
   padding: 0;
   list-style: none;
 }
+
 h1,
 h2,
 h3,
@@ -57,12 +65,15 @@ h6 {
   font-size: inherit;
   font-weight: inherit;
 }
+
 p {
   margin: 0;
 }
+
 cite {
   font-style: normal;
 }
+
 fieldset {
   border-width: 0;
   padding: 0;

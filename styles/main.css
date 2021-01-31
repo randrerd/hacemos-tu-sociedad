@@ -27,6 +27,7 @@ a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 button {
@@ -133,7 +134,7 @@ p {
   text-align: center;
 }
 
-.iconify {
+.iconify, .iconify--envelope--contact, .iconify--whatsapp--contact, .iconify--arrowdown, .iconify--hamburger-menu, .iconify--linkedin, .iconify--footer {
   margin-right: 0.3em;
   color: #fff;
 }
@@ -167,7 +168,7 @@ p {
   border-radius: 25px;
   color: #fff;
   display: inline-flex;
-  padding: 0.75rem 1rem;
+  padding: 1em 1.5em;
   font-weight: 400;
   margin-top: 2em;
 }
@@ -216,6 +217,7 @@ p {
   position: sticky;
   top: 0;
   z-index: 30;
+  transition: all 0.25s linear;
 }
 
 .contact {
@@ -233,7 +235,7 @@ p {
   background: #fff;
   height: 22px;
 }
-.contact__content-wrapper {
+.contact__content-wrapper, .contact__content-wrapper--linkedin, .contact__content-wrapper--phone {
   display: inline-flex;
   align-items: center;
 }
@@ -254,6 +256,8 @@ p {
 .navbar {
   background-color: #fff;
   padding: 1.75em 0;
+  position: relative;
+  transition: all 0.25s linear;
 }
 .navbar__logo {
   width: 50%;
@@ -291,6 +295,10 @@ p {
 }
 .navbar__item {
   padding: 0.45em 0.85em;
+}
+.navbar__item__link {
+  display: block;
+  width: 100%;
 }
 .navbar__item:hover:active {
   background: #222551;
