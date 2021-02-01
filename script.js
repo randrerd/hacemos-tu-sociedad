@@ -10,6 +10,7 @@ const DOM = (() => {
   const headerContainer = document.querySelector('.header');
   const navbarContainer = document.querySelector('.navbar');
   let prevScrollpos = window.pageYOffset;
+  let isScrollFromNav = false;
 
   //Event listeners
   hamburgerBars.addEventListener('click', () => handleHamburgerBars());
@@ -29,7 +30,6 @@ const DOM = (() => {
     );
     const arrowIcon = listItemContainer.children[0].children[1];
     const contentContainer = listItemContainer.children[1];
-    const prevScrollpos = window.pageYOffset;
 
     const isContentContainerDown = contentContainer.classList.contains('show');
 
@@ -69,26 +69,32 @@ const DOM = (() => {
   };
 
   const handleNavbarScroll = () => {
-    const currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      headerContainer.style.top = '0';
-      navbarContainer.style.top = '0';
-    } else {
-      headerContainer.style.top = '-50px';
-      navbarContainer.style.top = '-150px';
-      dropdownMenu.classList.remove('visible');
+    //Avoids navbar to become visible again when
+    //scrolling up from clicking on navbar link
+    if (!isScrollFromNav) {
+      const currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        headerContainer.style.top = '0';
+        navbarContainer.style.top = '0';
+      } else {
+        headerContainer.style.top = '-50px';
+        navbarContainer.style.top = '-150px';
+        dropdownMenu.classList.remove('visible');
+      }
+      prevScrollpos = currentScrollPos;
     }
-    prevScrollpos = currentScrollPos;
+    isScrollFromNav = false;
   };
 
   const handleDropdownMenu = (target) => {
     const isHomeLink = target.attributes[0].value === '#';
 
-    if (isHomeLink) {
-      dropdownMenu.classList.remove('visible');
-    } else {
+    if (!isHomeLink) {
       headerContainer.style.top = '-50px';
       navbarContainer.style.top = '-150px';
     }
+    dropdownMenu.classList.remove('visible');
+
+    isScrollFromNav = true;
   };
 })();
