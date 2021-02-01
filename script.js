@@ -77,8 +77,8 @@ const DOM = (() => {
         headerContainer.style.top = '0';
         navbarContainer.style.top = '0';
       } else {
-        headerContainer.style.top = '-50px';
-        navbarContainer.style.top = '-150px';
+        headerContainer.style.top = '-195px';
+        navbarContainer.style.top = '-35px';
         dropdownMenu.classList.remove('visible');
       }
       prevScrollpos = currentScrollPos;
@@ -90,8 +90,8 @@ const DOM = (() => {
     const isHomeLink = target.attributes[0].value === '#';
 
     if (!isHomeLink) {
-      headerContainer.style.top = '-50px';
-      navbarContainer.style.top = '-150px';
+      headerContainer.style.top = '-195px';
+      navbarContainer.style.top = '-35px';
     }
     dropdownMenu.classList.remove('visible');
 

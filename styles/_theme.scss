@@ -4,11 +4,14 @@ $accent: #8666ee;
 $background: #222551;
 $stroke: #707070;
 
+//Media query breakpoints
+$xs: 340px;
 $md: 620px;
+$lg: 960px;
 
 html {
   font-size: 16px;
-  @media (min-width: $md) {
+  @media (min-width: $lg) {
     font-size: 20px;
   }
 }
