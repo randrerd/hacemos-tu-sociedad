@@ -557,6 +557,17 @@ p {
 
 .section--faq {
   background: no-repeat center/cover url(../assets/section-faq-bg.png), #222551 0% 0% no-repeat padding-box;
+  position: relative;
+  z-index: 20;
+}
+.section--faq::before {
+  content: "";
+  position: absolute;
+  mix-blend-mode: multiply;
+  background-color: #222551;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 .section--faq__container {
   text-align: center;
@@ -566,6 +577,7 @@ p {
   max-width: 85%;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 .section--faq__col {
   background: #fff;
@@ -630,7 +642,7 @@ p {
     position: relative;
     opacity: 1;
     margin: 0;
-    width: 20%;
+    width: 25%;
   }
 }
 .section--six__list {
@@ -662,10 +674,13 @@ p {
   color: #222551;
 }
 .section--blog__entry {
-  margin-bottom: 3em;
+  margin: 1em;
+  flex: 1 9em;
 }
-.section--blog__entry:last-child {
-  margin-bottom: 0;
+@media (min-width: 620px) {
+  .section--blog__entry {
+    width: 28%;
+  }
 }
 .section--blog__entry__heading {
   font-size: 1.25rem;
@@ -691,8 +706,22 @@ p {
 .section--contact__heading {
   color: #222551;
 }
+@media (min-width: 620px) {
+  .section--contact__heading {
+    text-align: left;
+  }
+}
+.section--contact__col {
+  flex: 1 18em;
+}
+@media (min-width: 620px) {
+  .section--contact__col + .section--contact__col {
+    margin-left: 1.5em;
+  }
+}
 .section--contact__info {
   margin-bottom: auto;
+  flex-basis: 4em;
 }
 .section--contact__info__name {
   display: block;
@@ -707,10 +736,16 @@ p {
   font-weight: 600;
 }
 .section--contact__form {
-  margin: 1.5em auto;
+  margin: 1.5em 0;
+}
+@media (min-width: 620px) {
+  .section--contact__form {
+    margin-top: 0;
+  }
 }
 .section--contact__form__col {
   width: 100%;
+  flex: 1 20em;
 }
 .section--contact__form__input, .section--contact__form__textarea {
   padding-bottom: 0.5em;
@@ -718,9 +753,15 @@ p {
   border-bottom: 3px solid #8666ee;
   width: 70%;
 }
+@media (min-width: 620px) {
+  .section--contact__form__input, .section--contact__form__textarea {
+    width: 95%;
+  }
+}
 .section--contact__form__input-wrapper, .section--contact__form__input-wrapper--textarea {
   position: relative;
   width: 100%;
+  flex: 1 15em;
 }
 .section--contact__form__input-wrapper--textarea {
   margin-top: 1em;
@@ -743,7 +784,7 @@ p {
 }
 .section--contact__form__textarea {
   border: 1px solid #8666ee;
-  width: 95%;
+  width: 100%;
 }
 .section--contact__form__textarea:valid ~ .section--contact__form__input__label, .section--contact__form__textarea:focus ~ .section--contact__form__input__label {
   top: -1.5rem;

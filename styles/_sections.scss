@@ -372,6 +372,18 @@
   @extend .section;
   background: no-repeat center/cover url(../assets/section-faq-bg.png),
     #222551 0% 0% no-repeat padding-box;
+  position: relative;
+  z-index: 20;
+
+  &::before {
+    content: '';
+    position: absolute;
+    mix-blend-mode: multiply;
+    background-color: $background;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
 
   &__container {
     text-align: center;
@@ -382,6 +394,7 @@
     max-width: 85%;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
   }
   &__col {
     background: #fff;
@@ -449,7 +462,7 @@
       position: relative;
       opacity: 1;
       margin: 0;
-      width: 20%;
+      width: 25%;
     }
   }
 
@@ -487,10 +500,10 @@
   }
 
   &__entry {
-    margin-bottom: 3em;
-
-    &:last-child {
-      margin-bottom: 0;
+    margin: 1em;
+    flex: 1 9em;
+    @media (min-width: $md) {
+      width: 28%;
     }
 
     &__heading {
@@ -524,10 +537,24 @@
 
   &__heading {
     color: $background;
+    @media (min-width: $md) {
+      text-align: left;
+    }
+  }
+
+  &__col {
+    flex: 1 18em;
+  }
+
+  &__col + &__col {
+    @media (min-width: $md) {
+      margin-left: 1.5em;
+    }
   }
 
   &__info {
     margin-bottom: auto;
+    flex-basis: 4em;
     &__name {
       display: block;
       font-weight: 600;
@@ -545,19 +572,27 @@
   }
 
   &__form {
-    margin: 1.5em auto;
+    margin: 1.5em 0;
+    @media (min-width: $md) {
+      margin-top: 0;
+    }
     &__col {
       width: 100%;
+      flex: 1 20em;
     }
     &__input {
       padding-bottom: 0.5em;
       margin-bottom: 2em;
       border-bottom: 3px solid $accent;
       width: 70%;
+      @media (min-width: $md) {
+        width: 95%;
+      }
 
       &-wrapper {
         position: relative;
         width: 100%;
+        flex: 1 15em;
 
         &--textarea {
           @extend .section--contact__form__input-wrapper;
@@ -589,7 +624,7 @@
     &__textarea {
       @extend .section--contact__form__input;
       border: 1px solid $accent;
-      width: 95%;
+      width: 100%;
 
       &:valid ~ .section--contact__form__input__label,
       &:focus ~ .section--contact__form__input__label {
