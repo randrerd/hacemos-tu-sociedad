@@ -74,13 +74,10 @@ const DOM = (() => {
   };
 
   const handleNavbarScroll = () => {
-    //Avoids navbar to become visible again when
-    //scrolling up from clicking on navbar link
     const currentScrollPos = window.pageYOffset;
     const pastHeroSection = 180;
-    console.log({ currentScrollPos, prevScrollPos });
+
     if (!isScrollFromNav) {
-      console.log({ currentScrollPos, prevScrollPos });
       if (prevScrollPos > currentScrollPos) {
         headerContainer.style.top = '0';
         navbarContainer.style.top = '0';
@@ -91,7 +88,6 @@ const DOM = (() => {
       }
       prevScrollPos = currentScrollPos;
     }
-    isScrollFromNav = false;
   };
 
   const handleDropdownMenu = (target) => {
@@ -102,7 +98,5 @@ const DOM = (() => {
       navbarContainer.style.top = '-60px';
     }
     dropdownMenu.classList.remove('visible');
-
-    isScrollFromNav = true;
   };
 })();
