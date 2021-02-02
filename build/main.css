@@ -604,6 +604,28 @@ p {
   color: #fff;
   position: relative;
 }
+@media (min-width: 820px) {
+  .section--six {
+    display: flex;
+  }
+}
+@media (min-width: 820px) {
+  .section--six__content {
+    margin-left: 2em;
+    width: 70%;
+    max-width: 850px;
+  }
+}
+@media (min-width: 820px) {
+  .section--six__heading {
+    text-align: left;
+  }
+}
+@media (min-width: 820px) {
+  .section--six__btn {
+    margin-left: 1.5em;
+  }
+}
 .section--six__img {
   position: absolute;
   right: 0;
@@ -612,6 +634,14 @@ p {
   margin-top: 3em;
   width: 70%;
   opacity: 0.1;
+}
+@media (min-width: 820px) {
+  .section--six__img {
+    position: relative;
+    opacity: 1;
+    margin: 0;
+    width: 20%;
+  }
 }
 .section--six__list {
   padding: 0 1em;

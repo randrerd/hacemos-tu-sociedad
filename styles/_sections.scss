@@ -412,6 +412,29 @@
   background: $background;
   color: #fff;
   position: relative;
+  @media (min-width: $lg) {
+    display: flex;
+  }
+
+  &__content {
+    @media (min-width: $lg) {
+      margin-left: 2em;
+      width: 70%;
+      max-width: 850px;
+    }
+  }
+
+  &__heading {
+    @media (min-width: $lg) {
+      text-align: left;
+    }
+  }
+
+  &__btn {
+    @media (min-width: $lg) {
+      margin-left: 1.5em;
+    }
+  }
 
   &__img {
     position: absolute;
@@ -421,7 +444,12 @@
     margin-top: 3em;
     width: 70%;
     opacity: 0.1;
-    // filter: blur(2px);
+    @media (min-width: $lg) {
+      position: relative;
+      opacity: 1;
+      margin: 0;
+      width: 20%;
+    }
   }
 
   &__list {
