@@ -370,7 +370,8 @@
 
 .section--faq {
   @extend .section;
-  background: no-repeat center/cover url(../assets/section-faq-bg.png);
+  background: no-repeat center/cover url(../assets/section-faq-bg.png),
+    #222551 0% 0% no-repeat padding-box;
 
   &__container {
     text-align: center;

@@ -11,6 +11,7 @@ $lg: 820px;
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
   @media (min-width: $lg) {
     font-size: 20px;
   }
