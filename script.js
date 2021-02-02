@@ -78,7 +78,7 @@ const DOM = (() => {
         navbarContainer.style.top = '0';
       } else {
         headerContainer.style.top = '-195px';
-        navbarContainer.style.top = '-35px';
+        navbarContainer.style.top = '-60px';
         dropdownMenu.classList.remove('visible');
       }
       prevScrollpos = currentScrollPos;
