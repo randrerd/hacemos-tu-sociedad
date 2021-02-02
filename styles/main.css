@@ -558,6 +558,7 @@ p {
 }
 .section--faq__container {
   text-align: center;
+  align-items: unset;
 }
 .section--faq__heading {
   max-width: 85%;
@@ -567,8 +568,10 @@ p {
 .section--faq__col {
   background: #fff;
   padding: 1.5em;
-  margin-bottom: 1.5em;
+  margin: 0.25em;
+  flex: 1 23em;
   border-radius: 25px;
+  font-size: 0.9rem;
 }
 .section--faq__col__heading {
   border-radius: 10px;
@@ -648,6 +651,7 @@ p {
 .section--blog__btn {
   background: none;
   color: #585858;
+  border: none;
   font-weight: 600;
   font-size: 1.5em;
 }

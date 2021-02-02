@@ -374,6 +374,7 @@
 
   &__container {
     text-align: center;
+    align-items: unset;
   }
 
   &__heading {
@@ -384,8 +385,10 @@
   &__col {
     background: #fff;
     padding: 1.5em;
-    margin-bottom: 1.5em;
+    margin: 0.25em;
+    flex: 1 23em;
     border-radius: 25px;
+    font-size: 0.9rem;
 
     &__heading {
       border-radius: 10px;
@@ -481,6 +484,7 @@
   &__btn {
     background: none;
     color: $primary;
+    border: none;
     font-weight: 600;
     font-size: 1.5em;
   }
