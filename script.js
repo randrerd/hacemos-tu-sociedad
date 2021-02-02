@@ -77,7 +77,7 @@ const DOM = (() => {
     //Avoids navbar to become visible again when
     //scrolling up from clicking on navbar link
     const currentScrollPos = window.pageYOffset;
-    const pastHeroSection = 120;
+    const pastHeroSection = 180;
     console.log({ currentScrollPos, prevScrollPos });
     if (!isScrollFromNav) {
       console.log({ currentScrollPos, prevScrollPos });
