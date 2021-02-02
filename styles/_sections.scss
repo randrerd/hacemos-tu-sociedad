@@ -162,12 +162,12 @@
   @extend .section;
   background: no-repeat center/cover url(../assets/Header.png),
     linear-gradient(90deg, #304c5b 0%, #3a494e 25%, #364044 50%, #3b4e58 75%);
-  background-size: cover;
   transition: all 0.5s ease-in-out;
+  background-position: 60% center;
 
   @media (min-width: $lg) {
-    padding-top: 6em;
-    padding-bottom: 7em;
+    padding: 7.5em 0;
+    background-position: center 75%;
   }
   &__heading {
     width: min-content;
@@ -266,24 +266,8 @@
     background: #fff;
     border-radius: 25px;
     padding: 1em;
-    margin-bottom: 1.5em;
-    margin: 0;
-    width: 30%;
     flex: 1 15em;
-    margin-bottom: 1em;
-
-    &:last-child {
-      margin-bottom: 0;
-      @media (min-width: $lg) {
-        margin-bottom: 1em;
-      }
-    }
-  }
-
-  &__list + &__list {
-    @media (min-width: $md) {
-      margin-left: 0.85em;
-    }
+    margin: 0.5em;
   }
 
   &__item {
@@ -305,8 +289,15 @@
 
 .section--four {
   @extend .section;
-  background: no-repeat center/cover url('../assets/section-four-img.png'),
-    linear-gradient(90deg, #b4a392 0%, #ab9688 25%, #d1c3bb 50%, #d3c9c3 75%);
+  background: no-repeat center/cover url('../assets/section-four-img.png'), #fff;
+  background-attachment: fixed;
+
+  @media (min-width: $lg) {
+    // background: none;
+    position: relative;
+    background-position: left;
+    background-size: 50%;
+  }
 
   &__heading {
     color: $background;
@@ -356,17 +347,30 @@
     }
   }
 
+  &__content {
+    @media (min-width: $lg) {
+      width: 45%;
+      margin: 0;
+      margin-left: auto;
+      font-size: 0.85rem;
+    }
+  }
   &__img {
     display: none;
     position: absolute;
-    filter: opacity(20%);
+    // @media (min-width: $lg) {
+    //   display: block;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 53%;
+    // }
   }
 }
 
 .section--faq {
   @extend .section;
   background: no-repeat center/cover url(../assets/section-faq-bg.png);
-  backdrop-filter: hue-rotate(225deg);
 
   &__container {
     text-align: center;
