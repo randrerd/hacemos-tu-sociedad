@@ -3,13 +3,14 @@
 const DOM = (() => {
   //DOM Cache
   const hamburgerBars = document.querySelector('.navbar__hamburger');
+  const navbarLinks = document.querySelectorAll('.navbar__item__link');
   const dropdownMenu = document.querySelector('.navbar__links');
   const sectionFourListItems = document.querySelectorAll(
     '.section--four__list__item'
   );
   const headerContainer = document.querySelector('.header');
   const navbarContainer = document.querySelector('.navbar');
-  let prevScrollpos = window.pageYOffset;
+  let prevScrollPos = window.pageYOffset;
   let isScrollFromNav = false;
 
   //Event listeners
@@ -18,7 +19,11 @@ const DOM = (() => {
     elem.addEventListener('click', () => handleDropdownItem(index));
   });
   window.addEventListener('scroll', () => handleNavbarScroll());
-  dropdownMenu.addEventListener('click', (e) => handleDropdownMenu(e.target));
+
+  navbarLinks.forEach((elem) =>
+    elem.addEventListener('click', (e) => handleDropdownMenu(e.target))
+  );
+  // dropdownMenu.addEventListener('click', (e) => handleDropdownMenu(e.target));
 
   const handleHamburgerBars = () => {
     dropdownMenu.classList.toggle('visible');
@@ -71,17 +76,20 @@ const DOM = (() => {
   const handleNavbarScroll = () => {
     //Avoids navbar to become visible again when
     //scrolling up from clicking on navbar link
+    const currentScrollPos = window.pageYOffset;
+    const pastHeroSection = 120;
+    console.log({ currentScrollPos, prevScrollPos });
     if (!isScrollFromNav) {
-      const currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
+      console.log({ currentScrollPos, prevScrollPos });
+      if (prevScrollPos > currentScrollPos) {
         headerContainer.style.top = '0';
         navbarContainer.style.top = '0';
-      } else {
+      } else if (currentScrollPos > pastHeroSection) {
         headerContainer.style.top = '-195px';
         navbarContainer.style.top = '-60px';
         dropdownMenu.classList.remove('visible');
       }
-      prevScrollpos = currentScrollPos;
+      prevScrollPos = currentScrollPos;
     }
     isScrollFromNav = false;
   };
@@ -91,7 +99,7 @@ const DOM = (() => {
 
     if (!isHomeLink) {
       headerContainer.style.top = '-195px';
-      navbarContainer.style.top = '-35px';
+      navbarContainer.style.top = '-60px';
     }
     dropdownMenu.classList.remove('visible');
 

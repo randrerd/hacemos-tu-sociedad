@@ -220,7 +220,7 @@ p {
   position: sticky;
   top: 0;
   z-index: 30;
-  transition: all 0.25s linear;
+  transition: all 0.25s ease-in-out;
   background: #fff;
 }
 
@@ -263,7 +263,7 @@ p {
   background-color: #fff;
   padding: 1.75em 0;
   position: relative;
-  transition: all 0.25s linear;
+  transition: all 0.25s ease-in-out;
 }
 @media (min-width: 820px) {
   .navbar {
