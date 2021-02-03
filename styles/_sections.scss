@@ -648,26 +648,36 @@
 
   @media (min-width: $md) {
     font-size: 0.7rem;
-  }
-  &__col {
-    flex: 1 5em;
-    margin: 0 auto;
-    justify-content: center;
-    margin-top: 0.5em;
-  }
-
-  &__img {
-    width: 50%;
-    margin-bottom: 1em;
-    @media (min-width: $md) {
-      width: 90%;
-    }
+    text-align: left;
   }
 
   &__row {
     display: block;
     @media (min-width: $md) {
       display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__col {
+    // flex: 1 5em;
+    // margin: 0 1.8em;
+    justify-content: center;
+    margin-top: 0.5em;
+  }
+
+  &__col + &__col {
+    @media (min-width: $md) {
+      margin-left: 1.8em;
+    }
+  }
+
+  &__img {
+    width: 90%;
+    max-width: 18em;
+    margin-bottom: 1em;
+    @media (min-width: $md) {
     }
   }
 }
