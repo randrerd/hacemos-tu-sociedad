@@ -560,7 +560,8 @@
 
   &__info {
     margin-bottom: auto;
-    flex-basis: 4em;
+    flex-basis: 15em;
+
     &__name {
       display: block;
       font-weight: 600;
@@ -582,10 +583,7 @@
     @media (min-width: $md) {
       margin-top: 0;
     }
-    &__col {
-      width: 100%;
-      flex: 1 20em;
-    }
+
     &__input {
       padding-bottom: 0.5em;
       margin-bottom: 2em;
@@ -598,7 +596,7 @@
       &-wrapper {
         position: relative;
         width: 100%;
-        flex: 1 15em;
+        flex: 1 13em;
 
         &--textarea {
           @extend .section--contact__form__input-wrapper;
@@ -645,10 +643,31 @@
   background: $background;
   color: #fff;
   text-align: center;
+  padding-top: 5em;
+  padding-bottom: 5em;
+
+  @media (min-width: $md) {
+    font-size: 0.7rem;
+  }
   &__col {
-    width: 80%;
+    flex: 1 5em;
     margin: 0 auto;
     justify-content: center;
     margin-top: 0.5em;
+  }
+
+  &__img {
+    width: 50%;
+    margin-bottom: 1em;
+    @media (min-width: $md) {
+      width: 90%;
+    }
+  }
+
+  &__row {
+    display: block;
+    @media (min-width: $md) {
+      display: flex;
+    }
   }
 }

@@ -141,7 +141,7 @@ p {
 }
 .iconify--footer {
   font-size: 1.5rem;
-  margin: 0 auto;
+  margin: 0.1em;
 }
 .iconify--linkedin {
   font-size: 1.2rem;
@@ -731,7 +731,7 @@ p {
 }
 .section--contact__info {
   margin-bottom: auto;
-  flex-basis: 4em;
+  flex-basis: 15em;
 }
 .section--contact__info__name {
   display: block;
@@ -753,10 +753,6 @@ p {
     margin-top: 0;
   }
 }
-.section--contact__form__col {
-  width: 100%;
-  flex: 1 20em;
-}
 .section--contact__form__input, .section--contact__form__textarea {
   padding-bottom: 0.5em;
   margin-bottom: 2em;
@@ -771,7 +767,7 @@ p {
 .section--contact__form__input-wrapper, .section--contact__form__input-wrapper--textarea {
   position: relative;
   width: 100%;
-  flex: 1 15em;
+  flex: 1 13em;
 }
 .section--contact__form__input-wrapper--textarea {
   margin-top: 1em;
@@ -804,12 +800,36 @@ p {
   background: #222551;
   color: #fff;
   text-align: center;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+@media (min-width: 620px) {
+  .section--footer {
+    font-size: 0.7rem;
+  }
 }
 .section--footer__col {
-  width: 80%;
+  flex: 1 5em;
   margin: 0 auto;
   justify-content: center;
   margin-top: 0.5em;
+}
+.section--footer__img {
+  width: 50%;
+  margin-bottom: 1em;
+}
+@media (min-width: 620px) {
+  .section--footer__img {
+    width: 90%;
+  }
+}
+.section--footer__row {
+  display: block;
+}
+@media (min-width: 620px) {
+  .section--footer__row {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
