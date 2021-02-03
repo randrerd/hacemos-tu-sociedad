@@ -87,6 +87,10 @@
     color: $background;
   }
 
+  &:active {
+    opacity: 0.8;
+  }
+
   &--center {
     @extend .btn;
     display: block;

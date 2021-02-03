@@ -179,6 +179,9 @@ p {
   background-color: #fff;
   color: #222551;
 }
+.btn:active, .btn--submit-form:active, .btn--center:active {
+  opacity: 0.8;
+}
 .btn--center {
   display: block;
   width: max-content;
