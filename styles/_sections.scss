@@ -117,7 +117,7 @@
     &.visible {
       opacity: 1;
       visibility: visible;
-      max-height: 300px;
+      max-height: 350px;
     }
 
     @media (min-width: $lg) {
@@ -143,18 +143,28 @@
       display: block;
       width: 100%;
       font-weight: 300;
+      padding: 0.5em 0.75em;
+      transition: color, background 0.2s ease-in-out;
       @media (min-width: $lg) {
-        display: initial;
-        width: auto;
         font-size: 0.9rem;
+        border-radius: 25px;
+      }
+
+      &:hover {
+        background: $background;
+        color: #fff;
+      }
+
+      &:active {
+        opacity: 0.8;
       }
     }
-    &:hover:active {
-      background: $background;
-    }
-    &:hover:active > &__link {
-      color: #fff;
-    }
+    // &:hover:active {
+    //   background: $background;
+    // }
+    // &:hover:active > &__link {
+    //   color: #fff;
+    // }
   }
   &__item + &__item {
     @media (min-width: $lg) {
@@ -376,8 +386,7 @@
 
 .section--faq {
   @extend .section;
-  background: no-repeat center/cover url(../assets/section-faq-bg.png),
-    #222551 0% 0% no-repeat padding-box;
+  background: no-repeat center/cover url(../assets/section-faq-bg.png);
   position: relative;
   z-index: 20;
 
@@ -540,6 +549,19 @@
 
 .section--contact {
   @extend .section;
+  background: no-repeat center/cover url(../assets/form-bg.png);
+  position: relative;
+  z-index: 20;
+
+  &::before {
+    content: '';
+    position: absolute;
+    mix-blend-mode: multiply;
+    background-color: #fff;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
 
   &__heading {
     color: $background;
@@ -589,6 +611,7 @@
       margin-bottom: 2em;
       border-bottom: 3px solid $accent;
       width: 70%;
+      background: transparent;
       @media (min-width: $md) {
         width: 95%;
       }
@@ -629,6 +652,7 @@
       @extend .section--contact__form__input;
       border: 1px solid $accent;
       width: 100%;
+      background: #fff;
 
       &:valid ~ .section--contact__form__input__label,
       &:focus ~ .section--contact__form__input__label {

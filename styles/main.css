@@ -85,7 +85,7 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   html {
     font-size: 20px;
   }
@@ -193,7 +193,7 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   html {
     font-size: 20px;
   }
@@ -274,7 +274,7 @@ p {
   position: relative;
   transition: all 0.25s ease-in-out;
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .navbar {
     width: 87%;
     margin: 0 auto;
@@ -282,7 +282,7 @@ p {
     justify-content: space-between;
   }
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .navbar__img-wrapper {
     width: 30%;
     margin: 0;
@@ -292,7 +292,7 @@ p {
   width: 50%;
   max-width: 10em;
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .navbar__logo {
     width: initial;
   }
@@ -311,7 +311,7 @@ p {
   background: #222551;
   height: 36px;
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .navbar__hamburger {
     display: none;
   }
@@ -330,9 +330,9 @@ p {
 .navbar__links.visible {
   opacity: 1;
   visibility: visible;
-  max-height: 300px;
+  max-height: 350px;
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .navbar__links {
     width: auto;
     opacity: 1;
@@ -347,7 +347,7 @@ p {
 .navbar__item {
   padding: 0.45em 0.85em;
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .navbar__item {
     margin: auto 0;
     text-align: center;
@@ -358,21 +358,23 @@ p {
   display: block;
   width: 100%;
   font-weight: 300;
+  padding: 0.5em 0.75em;
+  transition: color, background 0.2s ease-in-out;
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .navbar__item__link {
-    display: initial;
-    width: auto;
     font-size: 0.9rem;
+    border-radius: 25px;
   }
 }
-.navbar__item:hover:active {
+.navbar__item__link:hover {
   background: #222551;
-}
-.navbar__item:hover:active > .navbar__item__link {
   color: #fff;
 }
-@media (min-width: 820px) {
+.navbar__item__link:active {
+  opacity: 0.8;
+}
+@media (min-width: 995px) {
   .navbar__item + .navbar__item {
     margin-left: 0.45em;
   }
@@ -383,7 +385,7 @@ p {
   transition: all 0.5s ease-in-out;
   background-position: 60% center;
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .section--hero {
     padding: 7.5em 0;
     background-position: center 75%;
@@ -399,7 +401,7 @@ p {
   margin: 0 auto;
   border-bottom: 3px solid #fff;
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .section--hero__heading {
     font-size: 3.5rem;
     margin: 0;
@@ -414,7 +416,7 @@ p {
   margin-top: 1em;
   font-size: 1.35rem;
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .section--hero__text {
     margin: 0;
     margin-bottom: 0.2em;
@@ -423,7 +425,7 @@ p {
 .section--hero__container {
   text-align: center;
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .section--hero__container {
     text-align: left;
   }
@@ -432,13 +434,13 @@ p {
 .section--two {
   text-align: center;
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .section--two__container {
     display: flex;
     align-items: center;
   }
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .section--two__item {
     margin: 0;
     padding: 0 2em;
@@ -451,7 +453,7 @@ p {
   border-top: 1px solid #707070;
   padding-top: 2em;
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .section--two__item + .section--two__item {
     border: none;
     border-left: 1px solid #707070;
@@ -463,7 +465,7 @@ p {
   width: 22%;
   max-width: 6.5rem;
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .section--two__img {
     width: 30%;
     padding: 0 0.5em;
@@ -506,7 +508,7 @@ p {
   background: no-repeat center/cover url("../assets/section-four-img.png"), #fff;
   background-attachment: fixed;
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .section--four {
     position: relative;
     background-position: left;
@@ -552,7 +554,7 @@ p {
   padding: 0 0.5em;
   margin-top: 0.35em;
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .section--four__content {
     width: 45%;
     margin: 0;
@@ -566,7 +568,7 @@ p {
 }
 
 .section--faq {
-  background: no-repeat center/cover url(../assets/section-faq-bg.png), #222551 0% 0% no-repeat padding-box;
+  background: no-repeat center/cover url(../assets/section-faq-bg.png);
   position: relative;
   z-index: 20;
 }
@@ -616,24 +618,24 @@ p {
   color: #fff;
   position: relative;
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .section--six {
     display: flex;
   }
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .section--six__content {
     margin-left: 2em;
     width: 70%;
     max-width: 850px;
   }
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .section--six__heading {
     text-align: left;
   }
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .section--six__btn {
     margin-left: 1.5em;
   }
@@ -647,7 +649,7 @@ p {
   width: 70%;
   opacity: 0.1;
 }
-@media (min-width: 820px) {
+@media (min-width: 995px) {
   .section--six__img {
     position: relative;
     opacity: 1;
@@ -713,6 +715,20 @@ p {
   font-size: 1.5em;
 }
 
+.section--contact {
+  background: no-repeat center/cover url(../assets/form-bg.png);
+  position: relative;
+  z-index: 20;
+}
+.section--contact::before {
+  content: "";
+  position: absolute;
+  mix-blend-mode: multiply;
+  background-color: #fff;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
 .section--contact__heading {
   color: #222551;
 }
@@ -758,6 +774,7 @@ p {
   margin-bottom: 2em;
   border-bottom: 3px solid #8666ee;
   width: 70%;
+  background: transparent;
 }
 @media (min-width: 620px) {
   .section--contact__form__input, .section--contact__form__textarea {
@@ -791,6 +808,7 @@ p {
 .section--contact__form__textarea {
   border: 1px solid #8666ee;
   width: 100%;
+  background: #fff;
 }
 .section--contact__form__textarea:valid ~ .section--contact__form__input__label, .section--contact__form__textarea:focus ~ .section--contact__form__input__label {
   top: -1.5rem;
