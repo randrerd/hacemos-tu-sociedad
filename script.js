@@ -6,7 +6,7 @@ const DOM = (() => {
   const navbarLinks = document.querySelectorAll('.navbar__item__link');
   const dropdownMenu = document.querySelector('.navbar__links');
   const sectionFourListItems = document.querySelectorAll(
-    '.section--four__list__item'
+    '.section--four__list__dropdown'
   );
   const headerContainer = document.querySelector('.header');
   const navbarContainer = document.querySelector('.navbar');
@@ -43,9 +43,11 @@ const DOM = (() => {
         //Iterates over all of the list item containers
         //to check if there's any item that's already down
         sectionFourListItems.forEach((listItem) => {
-          const dropdownContent = listItem.children[1];
-          const otherArrow = listItem.children[0].children[1];
+          const dropdownContent = listItem.nextElementSibling;
+          const otherArrow = listItem.children[1];
 
+          //Boolean flags that checks if dropdown content is showing on
+          //current element
           const isOtherDropdownDown = dropdownContent.classList.contains(
             'show'
           );
