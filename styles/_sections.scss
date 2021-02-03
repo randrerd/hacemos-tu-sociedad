@@ -329,6 +329,7 @@
     &__dropdown {
       border-bottom: 2px solid $accent;
       padding-bottom: 0.5em;
+      cursor: pointer;
     }
 
     &__item {
@@ -374,13 +375,6 @@
   &__img {
     display: none;
     position: absolute;
-    // @media (min-width: $lg) {
-    //   display: block;
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   width: 53%;
-    // }
   }
 }
 
@@ -516,7 +510,7 @@
 
   &__entry {
     margin: 1em;
-    flex: 1 9em;
+    flex: 1 13em;
     @media (min-width: $md) {
       width: 28%;
     }

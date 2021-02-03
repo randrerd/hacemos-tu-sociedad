@@ -539,6 +539,7 @@ p {
 .section--four__list__dropdown {
   border-bottom: 2px solid #8666ee;
   padding-bottom: 0.5em;
+  cursor: pointer;
 }
 .section--four__list__item {
   padding-bottom: 1em;
@@ -698,7 +699,7 @@ p {
 }
 .section--blog__entry {
   margin: 1em;
-  flex: 1 9em;
+  flex: 1 13em;
 }
 @media (min-width: 620px) {
   .section--blog__entry {
