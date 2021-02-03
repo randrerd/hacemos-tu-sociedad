@@ -146,7 +146,7 @@ p {
   margin: 0 auto;
 }
 .iconify--linkedin {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin: 0;
 }
 .iconify--hamburger-menu {
@@ -233,7 +233,7 @@ p {
   background-color: #222551;
   padding: 0.65em 0;
 }
-@media (max-width: 340px) {
+@media (max-width: 345px) {
   .contact__container {
     width: 95%;
   }
@@ -249,9 +249,18 @@ p {
 .contact__content-wrapper, .contact__content-wrapper--linkedin, .contact__content-wrapper--phone {
   display: inline-flex;
   align-items: center;
+  position: relative;
 }
 .contact__content-wrapper--phone {
-  margin-left: 1em;
+  margin-left: 0.2em;
+}
+.contact__content-wrapper--phone::before {
+  content: "";
+  position: relative;
+  background: #fff;
+  height: 1em;
+  margin: 0 0.15em;
+  width: 1px;
 }
 .contact__content-wrapper--linkedin {
   margin-left: auto;
@@ -446,6 +455,7 @@ p {
     margin: 0;
     padding: 0 2em;
     min-height: 4em;
+    flex: 1;
   }
 }
 .section--two__item + .section--two__item {
