@@ -175,6 +175,7 @@ p {
   font-weight: 400;
   margin-top: 2em;
   border: 2px solid #8666ee;
+  transition: all 0.2s ease-in-out;
 }
 .btn:hover, .btn--submit-form:hover, .btn--center:hover, .btn:active, .btn--submit-form:active, .btn--center:active {
   background-color: #fff;
@@ -191,6 +192,7 @@ p {
 .btn--submit-form {
   display: block;
   margin-left: auto;
+  font-size: 1rem;
 }
 
 html {

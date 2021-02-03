@@ -79,6 +79,7 @@
   font-weight: 400;
   margin-top: 2em;
   border: 2px solid $accent;
+  transition: all 0.2s ease-in-out;
 
   &:hover,
   &:active {
@@ -98,5 +99,6 @@
     @extend .btn;
     display: block;
     margin-left: auto;
+    font-size: 1rem;
   }
 }
