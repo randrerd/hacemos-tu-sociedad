@@ -546,6 +546,9 @@ p {
   padding-bottom: 0.5em;
   cursor: pointer;
 }
+.section--four__list__dropdown:active {
+  opacity: 0.8;
+}
 .section--four__list__item {
   padding-bottom: 1em;
   margin: 0.85em 0;

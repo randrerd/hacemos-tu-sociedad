@@ -330,6 +330,9 @@
       border-bottom: 2px solid $accent;
       padding-bottom: 0.5em;
       cursor: pointer;
+      &:active {
+        opacity: 0.8;
+      }
     }
 
     &__item {
