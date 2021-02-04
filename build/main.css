@@ -846,7 +846,7 @@ p {
   font-size: 0.7rem;
   bottom: 15%;
 }
-@media (min-width: 620px) {
+@media (min-width: 995px) {
   .section--contact__form__error-msg {
     bottom: 19.5%;
   }
