@@ -175,7 +175,7 @@
 
 .section--hero {
   @extend .section;
-  background: no-repeat center/cover url(../assets/Header.png),
+  background: no-repeat center/cover url(../assets/hero-bg.jpg),
     linear-gradient(90deg, #304c5b 0%, #3a494e 25%, #364044 50%, #3b4e58 75%);
   transition: all 0.5s ease-in-out;
   background-position: 60% center;
@@ -305,7 +305,7 @@
 
 .section--four {
   @extend .section;
-  background: no-repeat center/cover url('../assets/section-four-img.png'), #fff;
+  background: no-repeat center/cover url('../assets/section-four-bg.jpg'), #fff;
   background-attachment: fixed;
 
   @media (min-width: $lg) {
@@ -383,7 +383,7 @@
 
 .section--faq {
   @extend .section;
-  background: no-repeat center/cover url(../assets/section-faq-bg.png);
+  background: no-repeat center/cover url(../assets/section-faq-bg.jpg);
   position: relative;
   z-index: 20;
 
@@ -546,7 +546,7 @@
 
 .section--contact {
   @extend .section;
-  background: no-repeat center/cover url(../assets/form-bg.png);
+  background: no-repeat center/cover url(../assets/form-bg.jpg);
   position: relative;
   z-index: 20;
 

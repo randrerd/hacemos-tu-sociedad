@@ -393,7 +393,7 @@ p {
 }
 
 .section--hero {
-  background: no-repeat center/cover url(../assets/Header.png), linear-gradient(90deg, #304c5b 0%, #3a494e 25%, #364044 50%, #3b4e58 75%);
+  background: no-repeat center/cover url(../assets/hero-bg.jpg), linear-gradient(90deg, #304c5b 0%, #3a494e 25%, #364044 50%, #3b4e58 75%);
   transition: all 0.5s ease-in-out;
   background-position: 60% center;
 }
@@ -521,7 +521,7 @@ p {
 }
 
 .section--four {
-  background: no-repeat center/cover url("../assets/section-four-img.png"), #fff;
+  background: no-repeat center/cover url("../assets/section-four-bg.jpg"), #fff;
   background-attachment: fixed;
 }
 @media (min-width: 995px) {
@@ -588,7 +588,7 @@ p {
 }
 
 .section--faq {
-  background: no-repeat center/cover url(../assets/section-faq-bg.png);
+  background: no-repeat center/cover url(../assets/section-faq-bg.jpg);
   position: relative;
   z-index: 20;
 }
@@ -736,7 +736,7 @@ p {
 }
 
 .section--contact {
-  background: no-repeat center/cover url(../assets/form-bg.png);
+  background: no-repeat center/cover url(../assets/form-bg.jpg);
   position: relative;
   z-index: 20;
 }
