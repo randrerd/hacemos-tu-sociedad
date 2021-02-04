@@ -195,6 +195,167 @@ p {
   font-size: 1rem;
 }
 
+.section--blog__entry {
+  margin: 1em;
+  flex: 1 13em;
+}
+@media (min-width: 620px) {
+  .section--blog__entry {
+    width: 28%;
+  }
+}
+.section--blog__entry__heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222551;
+  margin: 1em 0;
+}
+.section--blog__entry__img {
+  width: 100%;
+}
+.section--blog__entry__text {
+  padding-top: 1.5em;
+  border-top: 1px solid #585858;
+}
+
+.card, .section--faq__card, .section--three__card {
+  background: #fff;
+  padding: 1.5em;
+  margin: 0.5em;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.navbar__item {
+  padding: 0.45em 0.85em;
+  transition: color, background 0.2s ease-in-out;
+}
+@media (min-width: 995px) {
+  .navbar__item {
+    margin: auto 0;
+    text-align: center;
+    padding: 0 0.2em;
+  }
+}
+.navbar__item__link {
+  display: block;
+  position: relative;
+  width: 100%;
+  font-weight: 300;
+  padding: 0.25em 0.45em;
+}
+@media (min-width: 995px) {
+  .navbar__item__link {
+    font-size: 0.9rem;
+    border-radius: 25px;
+  }
+}
+.navbar__item__hover-border {
+  position: relative;
+  max-width: 0px;
+  background: #8666ee;
+  transition: all 0.15s ease-in-out;
+  height: 2.5px;
+}
+.navbar__item:hover {
+  background: #8666ee;
+  color: #fff;
+}
+@media (min-width: 995px) {
+  .navbar__item:hover {
+    background: initial;
+    color: unset;
+  }
+}
+@media (min-width: 995px) {
+  .navbar__item:hover > .navbar__item__hover-border {
+    max-width: 100%;
+  }
+}
+.navbar__item:active {
+  opacity: 0.8;
+}
+
+.section--contact__form {
+  margin: 1.5em 0;
+}
+@media (min-width: 620px) {
+  .section--contact__form {
+    margin-top: 0;
+  }
+}
+.section--contact__form__input, .section--contact__form__textarea {
+  padding-bottom: 0.5em;
+  margin-bottom: 2em;
+  border-bottom: 3px solid #8666ee;
+  width: 70%;
+  background: transparent;
+  font-size: 0.8rem;
+  transition: all 0.3s ease-in-out;
+}
+@media (min-width: 620px) {
+  .section--contact__form__input, .section--contact__form__textarea {
+    width: 95%;
+  }
+}
+.section--contact__form__input-wrapper, .section--contact__form__input-wrapper--textarea {
+  position: relative;
+  width: 100%;
+  flex: 1 13em;
+}
+.section--contact__form__input-wrapper--textarea {
+  margin-top: 1em;
+  position: relative;
+}
+.section--contact__form__input__label {
+  margin-top: 0.25em;
+  position: absolute;
+  left: 7.5px;
+  font-weight: 600;
+  transition: all 0.2s linear;
+  top: 0;
+}
+.section--contact__form__input:valid ~ .section--contact__form__input__label, .section--contact__form__textarea:valid ~ .section--contact__form__input__label, .section--contact__form__input:focus ~ .section--contact__form__input__label, .section--contact__form__textarea:focus ~ .section--contact__form__input__label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  left: 1px;
+  top: -1.2rem;
+  transition: all 0.2s linear;
+}
+.section--contact__form__textarea {
+  border: 1px solid #8666ee;
+  width: 100%;
+  background: #fff;
+  padding: 0.5em;
+}
+.section--contact__form__textarea:valid ~ .section--contact__form__input__label, .section--contact__form__textarea:focus ~ .section--contact__form__input__label {
+  top: -1.5rem;
+}
+.section--contact__form__upper {
+  margin-bottom: 1.5em;
+}
+.section--contact__form__error-msg {
+  position: absolute;
+  width: fit-content;
+  background-color: rgba(163, 0, 0, 0.8);
+  color: #fff;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.7rem;
+  bottom: 14%;
+  border-radius: 5px;
+}
+.section--contact__form__error-msg.show {
+  padding: 0.5em 0.75em;
+}
+@media (min-width: 995px) {
+  .section--contact__form__error-msg {
+    bottom: 16.5%;
+  }
+}
+
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -350,55 +511,6 @@ p {
     margin-top: 0;
   }
 }
-.navbar__item {
-  padding: 0.45em 0.85em;
-  transition: color, background 0.2s ease-in-out;
-}
-@media (min-width: 995px) {
-  .navbar__item {
-    margin: auto 0;
-    text-align: center;
-    padding: 0 0.2em;
-  }
-}
-.navbar__item__link {
-  display: block;
-  position: relative;
-  width: 100%;
-  font-weight: 300;
-  padding: 0.25em 0.45em;
-}
-@media (min-width: 995px) {
-  .navbar__item__link {
-    font-size: 0.9rem;
-    border-radius: 25px;
-  }
-}
-.navbar__item__hover-border {
-  position: relative;
-  max-width: 0px;
-  background: #8666ee;
-  transition: all 0.15s ease-in-out;
-  height: 2.5px;
-}
-.navbar__item:hover {
-  background: #8666ee;
-  color: #fff;
-}
-@media (min-width: 995px) {
-  .navbar__item:hover {
-    background: initial;
-    color: unset;
-  }
-}
-@media (min-width: 995px) {
-  .navbar__item:hover > .navbar__item__hover-border {
-    max-width: 100%;
-  }
-}
-.navbar__item:active {
-  opacity: 0.8;
-}
 @media (min-width: 995px) {
   .navbar__item + .navbar__item {
     margin-left: 0.45em;
@@ -509,12 +621,8 @@ p {
   justify-content: space-around;
   align-items: unset;
 }
-.section--three__list {
-  background: #fff;
-  border-radius: 25px;
-  padding: 1em;
+.section--three__card {
   flex: 1 15em;
-  margin: 0.5em;
 }
 .section--three__item {
   font-size: 0.9rem;
@@ -620,15 +728,10 @@ p {
   margin-right: auto;
   position: relative;
 }
-.section--faq__col {
-  background: #fff;
-  padding: 1.5em;
-  margin: 0.5em;
+.section--faq__card {
   flex: 1 23em;
-  border-radius: 25px;
-  font-size: 0.9rem;
 }
-.section--faq__col__heading {
+.section--faq__card__heading {
   border-radius: 10px;
   margin-bottom: 0.75em;
   color: #fff;
@@ -638,7 +741,7 @@ p {
   padding: 0.5em 0.75em;
   font-size: 1.5rem;
 }
-.section--faq__col__content {
+.section--faq__card__content {
   margin-bottom: 0.75em;
 }
 
@@ -714,28 +817,6 @@ p {
 .section--blog__heading {
   color: #222551;
 }
-.section--blog__entry {
-  margin: 1em;
-  flex: 1 13em;
-}
-@media (min-width: 620px) {
-  .section--blog__entry {
-    width: 28%;
-  }
-}
-.section--blog__entry__heading {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #222551;
-  margin: 1em 0;
-}
-.section--blog__entry__img {
-  width: 100%;
-}
-.section--blog__entry__text {
-  padding-top: 1.5em;
-  border-top: 1px solid #585858;
-}
 .section--blog__btn {
   background: none;
   color: #585858;
@@ -789,84 +870,6 @@ p {
 }
 .section--contact__info__anchor {
   font-weight: 600;
-}
-.section--contact__form {
-  margin: 1.5em 0;
-}
-@media (min-width: 620px) {
-  .section--contact__form {
-    margin-top: 0;
-  }
-}
-.section--contact__form__input, .section--contact__form__textarea {
-  padding-bottom: 0.5em;
-  margin-bottom: 2em;
-  border-bottom: 3px solid #8666ee;
-  width: 70%;
-  background: transparent;
-  font-size: 0.8rem;
-  transition: all 0.3s ease-in-out;
-}
-@media (min-width: 620px) {
-  .section--contact__form__input, .section--contact__form__textarea {
-    width: 95%;
-  }
-}
-.section--contact__form__input-wrapper, .section--contact__form__input-wrapper--textarea {
-  position: relative;
-  width: 100%;
-  flex: 1 13em;
-}
-.section--contact__form__input-wrapper--textarea {
-  margin-top: 1em;
-  position: relative;
-}
-.section--contact__form__input__label {
-  margin-top: 0.25em;
-  position: absolute;
-  left: 7.5px;
-  font-weight: 600;
-  transition: all 0.2s linear;
-  top: 0;
-}
-.section--contact__form__input:valid ~ .section--contact__form__input__label, .section--contact__form__textarea:valid ~ .section--contact__form__input__label, .section--contact__form__input:focus ~ .section--contact__form__input__label, .section--contact__form__textarea:focus ~ .section--contact__form__input__label {
-  font-size: 0.85rem;
-  font-weight: 500;
-  left: 1px;
-  top: -1.2rem;
-  transition: all 0.2s linear;
-}
-.section--contact__form__textarea {
-  border: 1px solid #8666ee;
-  width: 100%;
-  background: #fff;
-  padding: 0.5em;
-}
-.section--contact__form__textarea:valid ~ .section--contact__form__input__label, .section--contact__form__textarea:focus ~ .section--contact__form__input__label {
-  top: -1.5rem;
-}
-.section--contact__form__upper {
-  margin-bottom: 1.5em;
-}
-.section--contact__form__error-msg {
-  position: absolute;
-  width: fit-content;
-  background-color: rgba(163, 0, 0, 0.8);
-  color: #fff;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-size: 0.7rem;
-  bottom: 14%;
-  border-radius: 5px;
-}
-.section--contact__form__error-msg.show {
-  padding: 0.5em 0.75em;
-}
-@media (min-width: 995px) {
-  .section--contact__form__error-msg {
-    bottom: 16.5%;
-  }
 }
 
 .section--footer {

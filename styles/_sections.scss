@@ -108,7 +108,6 @@
     visibility: hidden;
     position: absolute;
     width: 100%;
-    // padding: 0 0.85em;
     margin-top: 1.5em;
     box-shadow: 0 3.5px #0000001a;
     max-height: 0;
@@ -131,55 +130,7 @@
       margin-top: 0;
     }
   }
-  &__item {
-    padding: 0.45em 0.85em;
-    transition: color, background 0.2s ease-in-out;
-    @media (min-width: $lg) {
-      margin: auto 0;
-      text-align: center;
-      padding: 0 0.2em;
-    }
 
-    &__link {
-      display: block;
-      position: relative;
-      width: 100%;
-      font-weight: 300;
-      padding: 0.25em 0.45em;
-
-      @media (min-width: $lg) {
-        font-size: 0.9rem;
-        border-radius: 25px;
-      }
-    }
-
-    &__hover-border {
-      position: relative;
-      max-width: 0px;
-      background: $accent;
-      transition: all 0.15s ease-in-out;
-      height: 2.5px;
-    }
-    &:hover {
-      background: $accent;
-      color: #fff;
-
-      @media (min-width: $lg) {
-        background: initial;
-        color: unset;
-      }
-    }
-
-    &:hover > &__hover-border {
-      @media (min-width: $lg) {
-        max-width: 100%;
-      }
-    }
-
-    &:active {
-      opacity: 0.8;
-    }
-  }
   &__item + &__item {
     @media (min-width: $lg) {
       margin-left: 0.45em;
@@ -292,12 +243,9 @@
     align-items: unset;
   }
 
-  &__list {
-    background: #fff;
-    border-radius: 25px;
-    padding: 1em;
+  &__card {
+    @extend .card;
     flex: 1 15em;
-    margin: 0.5em;
   }
 
   &__item {
@@ -422,13 +370,9 @@
     margin-right: auto;
     position: relative;
   }
-  &__col {
-    background: #fff;
-    padding: 1.5em;
-    margin: 0.5em;
+  &__card {
+    @extend .card;
     flex: 1 23em;
-    border-radius: 25px;
-    font-size: 0.9rem;
 
     &__heading {
       border-radius: 10px;
@@ -525,30 +469,6 @@
     color: $background;
   }
 
-  &__entry {
-    margin: 1em;
-    flex: 1 13em;
-    @media (min-width: $md) {
-      width: 28%;
-    }
-
-    &__heading {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: $background;
-      margin: 1em 0;
-    }
-
-    &__img {
-      width: 100%;
-    }
-
-    &__text {
-      padding-top: 1.5em;
-      border-top: 1px solid $primary;
-    }
-  }
-
   &__btn {
     background: none;
     color: $primary;
@@ -608,94 +528,6 @@
 
     &__anchor {
       font-weight: 600;
-    }
-  }
-
-  &__form {
-    margin: 1.5em 0;
-    @media (min-width: $md) {
-      margin-top: 0;
-    }
-
-    &__input {
-      padding-bottom: 0.5em;
-      margin-bottom: 2em;
-      border-bottom: 3px solid $accent;
-      width: 70%;
-      background: transparent;
-      font-size: 0.8rem;
-      transition: all 0.3s ease-in-out;
-      @media (min-width: $md) {
-        width: 95%;
-      }
-
-      &-wrapper {
-        position: relative;
-        width: 100%;
-        flex: 1 13em;
-
-        &--textarea {
-          @extend .section--contact__form__input-wrapper;
-          margin-top: 1em;
-          position: relative;
-        }
-      }
-
-      &__label {
-        margin-top: 0.25em;
-        position: absolute;
-        left: 7.5px;
-        font-weight: 600;
-        transition: all 0.2s linear;
-        top: 0;
-      }
-
-      &:valid ~ &__label,
-      &:focus ~ &__label {
-        // bottom: 3.25rem;
-        font-size: 0.85rem;
-        font-weight: 500;
-        left: 1px;
-        top: -1.2rem;
-        transition: all 0.2s linear;
-      }
-    }
-
-    &__textarea {
-      @extend .section--contact__form__input;
-      border: 1px solid $accent;
-      width: 100%;
-      background: #fff;
-      padding: 0.5em;
-
-      &:valid ~ .section--contact__form__input__label,
-      &:focus ~ .section--contact__form__input__label {
-        top: -1.5rem;
-      }
-    }
-
-    &__upper {
-      margin-bottom: 1.5em;
-    }
-
-    &__error-msg {
-      position: absolute;
-      width: fit-content;
-      background-color: hsl(0, 100%, 32%, 0.8);
-      color: #fff;
-      left: 0;
-      right: 0;
-      text-align: center;
-      font-size: 0.7rem;
-      bottom: 14%;
-      border-radius: 5px;
-
-      &.show {
-        padding: 0.5em 0.75em;
-      }
-      @media (min-width: $lg) {
-        bottom: 16.5%;
-      }
     }
   }
 }
