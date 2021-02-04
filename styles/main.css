@@ -361,9 +361,10 @@ p {
 }
 .navbar__item__link {
   display: block;
+  position: relative;
   width: 100%;
   font-weight: 300;
-  padding: 0.5em 0.75em;
+  padding: 0.25em 0.45em;
   transition: color, background 0.2s ease-in-out;
 }
 @media (min-width: 995px) {
@@ -372,11 +373,29 @@ p {
     border-radius: 25px;
   }
 }
-.navbar__item__link:hover {
-  background: #222551;
+.navbar__item__hover-border {
+  position: relative;
+  max-width: 0px;
+  background: #8666ee;
+  transition: all 0.15s ease-in-out;
+  height: 2.5px;
+}
+.navbar__item:hover {
+  background: #8666ee;
   color: #fff;
 }
-.navbar__item__link:active {
+@media (min-width: 995px) {
+  .navbar__item:hover {
+    background: initial;
+    color: unset;
+  }
+}
+@media (min-width: 995px) {
+  .navbar__item:hover > .navbar__item__hover-border {
+    max-width: 100%;
+  }
+}
+.navbar__item:active {
   opacity: 0.8;
 }
 @media (min-width: 995px) {

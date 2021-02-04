@@ -141,30 +141,43 @@
 
     &__link {
       display: block;
+      position: relative;
       width: 100%;
       font-weight: 300;
-      padding: 0.5em 0.75em;
+      padding: 0.25em 0.45em;
       transition: color, background 0.2s ease-in-out;
       @media (min-width: $lg) {
         font-size: 0.9rem;
         border-radius: 25px;
       }
+    }
 
-      &:hover {
-        background: $background;
-        color: #fff;
-      }
+    &__hover-border {
+      position: relative;
+      max-width: 0px;
+      background: $accent;
+      transition: all 0.15s ease-in-out;
+      height: 2.5px;
+    }
+    &:hover {
+      background: $accent;
+      color: #fff;
 
-      &:active {
-        opacity: 0.8;
+      @media (min-width: $lg) {
+        background: initial;
+        color: unset;
       }
     }
-    // &:hover:active {
-    //   background: $background;
-    // }
-    // &:hover:active > &__link {
-    //   color: #fff;
-    // }
+
+    &:hover > &__hover-border {
+      @media (min-width: $lg) {
+        max-width: 100%;
+      }
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
   }
   &__item + &__item {
     @media (min-width: $lg) {
