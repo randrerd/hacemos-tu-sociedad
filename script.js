@@ -105,7 +105,6 @@ const formHandler = (() => {
     '.section--contact__form__upper'
   );
   const errorElement = document.createElement('span');
-  errorElement.innerText = '  ';
   errorElement.className = 'section--contact__form__error-msg';
 
   formElement.addEventListener('submit', (e) => handleSubmit(e));
@@ -141,6 +140,7 @@ const formHandler = (() => {
           input.elem.style.borderBottomColor = '#ce0b0b';
         } else {
           errorElement.innerText = '';
+          errorElement.classList.remove('show');
           input.elem.style.borderBottomColor = '';
         }
       }
@@ -164,7 +164,7 @@ const formHandler = (() => {
         ? 'la información ingresada'
         : `el ${invalidInput} ingresado`
     }`;
-
+    errorElement.classList.add('show');
     errorElement.innerText = errorMsg;
   };
 
