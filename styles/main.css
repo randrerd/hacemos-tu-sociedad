@@ -352,6 +352,7 @@ p {
 }
 .navbar__item {
   padding: 0.45em 0.85em;
+  transition: color, background 0.2s ease-in-out;
 }
 @media (min-width: 995px) {
   .navbar__item {
@@ -366,7 +367,6 @@ p {
   width: 100%;
   font-weight: 300;
   padding: 0.25em 0.45em;
-  transition: color, background 0.2s ease-in-out;
 }
 @media (min-width: 995px) {
   .navbar__item__link {
