@@ -170,14 +170,15 @@ p {
   color: #fff;
   display: inline-flex;
   padding: 0.7em 1.5em;
-  font-weight: 400;
+  font-weight: 600;
   margin-top: 2em;
   border: 2px solid #8666ee;
   transition: all 0.2s ease-in-out;
+  letter-spacing: 0.65px;
 }
 .btn:hover, .btn--submit-form:hover, .btn--center:hover, .btn:active, .btn--submit-form:active, .btn--center:active {
   background-color: #fff;
-  color: #222551;
+  color: #8666ee;
 }
 .btn:active, .btn--submit-form:active, .btn--center:active {
   opacity: 0.8;
