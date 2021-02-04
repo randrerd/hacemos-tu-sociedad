@@ -38,40 +38,34 @@ const DOM = (() => {
 
     const isContentContainerDown = contentContainer.classList.contains('show');
 
-    try {
-      if (!isContentContainerDown) {
-        //Iterates over all of the list item containers
-        //to check if there's any item that's already down
-        sectionFourListItems.forEach((listItem) => {
-          const dropdownContent = listItem.nextElementSibling;
-          const otherArrow = listItem.children[1];
+    if (!isContentContainerDown) {
+      //Iterates over all of the list item containers
+      //to check if there's any item that's already down
+      sectionFourListItems.forEach((listItem) => {
+        const dropdownContent = listItem.nextElementSibling;
+        const otherArrow = listItem.children[1];
 
-          //Boolean flags that checks if dropdown content is showing on
-          //current element
-          const isOtherDropdownDown = dropdownContent.classList.contains(
-            'show'
-          );
+        //Boolean flags that checks if dropdown content is showing on
+        //current element
+        const isOtherDropdownDown = dropdownContent.classList.contains('show');
 
-          if (isOtherDropdownDown) {
-            //Hides the container that's showing and rotates arrow
-            otherArrow.style.transform = 'rotate(360deg)';
-            dropdownContent.classList.remove('show');
-          }
-        });
-
-        //Doesn't do anything for the last item since there's no content
-        //for it
-        if (index !== sectionFourListItems.length - 1) {
-          arrowIcon.style.transform = 'rotate(450deg)';
-          contentContainer.classList.add('show');
+        if (isOtherDropdownDown) {
+          //Hides the container that's showing and rotates arrow
+          otherArrow.style.transform = 'rotate(360deg)';
+          dropdownContent.classList.remove('show');
         }
-      } else {
-        //Hides the container when clicked a second time
-        arrowIcon.style.transform = 'rotate(360deg)';
-        contentContainer.classList.remove('show');
+      });
+
+      //Doesn't do anything for the last item since there's no content
+      //for it
+      if (index !== sectionFourListItems.length - 1) {
+        arrowIcon.style.transform = 'rotate(450deg)';
+        contentContainer.classList.add('show');
       }
-    } catch (err) {
-      console.log(err);
+    } else {
+      //Hides the container when clicked a second time
+      arrowIcon.style.transform = 'rotate(360deg)';
+      contentContainer.classList.remove('show');
     }
   };
 
@@ -100,5 +94,87 @@ const DOM = (() => {
       navbarContainer.style.top = '-60px';
     }
     dropdownMenu.classList.remove('visible');
+  };
+})();
+
+const formHandler = (() => {
+  const formElement = document.querySelector('#form');
+  const emailInput = document.querySelector('#form__email');
+  const phoneInput = document.querySelector('#form__phone');
+  const inputElementsWrapper = document.querySelector(
+    '.section--contact__form__upper'
+  );
+  const errorElement = document.createElement('span');
+  errorElement.innerText = '  ';
+  errorElement.className = 'section--contact__form__error-msg';
+
+  formElement.addEventListener('submit', (e) => handleSubmit(e));
+  emailInput.addEventListener('change', (e) => handleInputChange(e.target));
+  phoneInput.addEventListener('change', (e) => handleInputChange(e.target));
+  inputElementsWrapper.appendChild(errorElement);
+
+  const emailIsValid = () => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value);
+  };
+
+  const phoneIsValid = () => {
+    return /^(?:(?:00)?549?)?0?(?:11|15|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/.test(
+      phoneInput.value
+    );
+  };
+
+  const validationArray = [
+    {
+      validation: emailIsValid,
+      elem: emailInput,
+      name: 'e-mail',
+    },
+    { validation: phoneIsValid, elem: phoneInput, name: 'número de teléfono' },
+  ];
+
+  const handleInputChange = (target) => {
+    validationArray.forEach((input) => {
+      if (input.elem === target) {
+        const inputIsValid = input.validation();
+        if (!inputIsValid) {
+          showErrMsg(input.name);
+          input.elem.style.borderBottomColor = '#ce0b0b';
+        } else {
+          errorElement.innerText = '';
+          input.elem.style.borderBottomColor = '';
+        }
+      }
+    });
+  };
+
+  const inputsAreValid = () => {
+    for (let i = 0; i < validationArray.length; i++) {
+      const object = validationArray[i];
+      const currentIsValid = object.validation();
+      if (!currentIsValid) {
+        return false;
+      }
+    }
+    return true;
+  };
+
+  const showErrMsg = (invalidInput = null) => {
+    const errorMsg = `Por favor verifique ${
+      !invalidInput
+        ? 'la información ingresada'
+        : `el ${invalidInput} ingresado`
+    }`;
+
+    errorElement.innerText = errorMsg;
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (!inputsAreValid()) {
+      showErrMsg();
+    } else {
+      //SUBMIT VALID FORM HERE
+    }
   };
 })();

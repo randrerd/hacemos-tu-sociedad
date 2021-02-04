@@ -408,7 +408,7 @@
   &__col {
     background: #fff;
     padding: 1.5em;
-    margin: 0.25em;
+    margin: 0.5em;
     flex: 1 23em;
     border-radius: 25px;
     font-size: 0.9rem;
@@ -606,6 +606,8 @@
       border-bottom: 3px solid $accent;
       width: 70%;
       background: transparent;
+      font-size: 0.8rem;
+      transition: all 0.3s ease-in-out;
       @media (min-width: $md) {
         width: 95%;
       }
@@ -651,6 +653,23 @@
       &:valid ~ .section--contact__form__input__label,
       &:focus ~ .section--contact__form__input__label {
         top: -1.5rem;
+      }
+    }
+
+    &__upper {
+      margin-bottom: 1.5em;
+    }
+
+    &__error-msg {
+      position: absolute;
+      width: fit-content;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 0.7rem;
+      bottom: 15%;
+      @media (min-width: $md) {
+        bottom: 19.5%;
       }
     }
   }
