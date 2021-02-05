@@ -122,6 +122,7 @@ p {
   display: flex;
   flex-wrap: wrap;
 }
+
 .col {
   position: relative;
 }
@@ -638,14 +639,24 @@ p {
 }
 
 .section--four {
-  background: no-repeat center/cover url("../assets/section-four-bg.jpg"), #fff;
+  position: relative;
+  background: no-repeat center/cover url(../assets/section-four-bg.jpg), #fff;
   background-attachment: fixed;
 }
 @media (min-width: 995px) {
   .section--four {
-    position: relative;
-    background-position: left;
-    background-size: 50%;
+    background: none;
+  }
+}
+@media (min-width: 995px) {
+  .section--four__parallax {
+    background: no-repeat left/contain url("../assets/section-four-bg.jpg"), #fff;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    height: stretch;
   }
 }
 .section--four__heading {
@@ -813,6 +824,7 @@ p {
 .section--blog {
   padding-left: 1em;
   padding-right: 1em;
+  display: none;
 }
 .section--blog__heading {
   color: #222551;

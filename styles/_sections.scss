@@ -267,14 +267,24 @@
 
 .section--four {
   @extend .section;
-  background: no-repeat center/cover url('../assets/section-four-bg.jpg'), #fff;
+  position: relative;
+  background: no-repeat center/cover url(../assets/section-four-bg.jpg), #fff;
   background-attachment: fixed;
-
   @media (min-width: $lg) {
-    // background: none;
-    position: relative;
-    background-position: left;
-    background-size: 50%;
+    background: none;
+  }
+
+  &__parallax {
+    @media (min-width: $lg) {
+      background: no-repeat left/contain url('../assets/section-four-bg.jpg'),
+        #fff;
+      background-attachment: fixed;
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100vh;
+      height: stretch;
+    }
   }
 
   &__heading {
@@ -464,7 +474,7 @@
   @extend .section;
   padding-left: 1em;
   padding-right: 1em;
-
+  display: none;
   &__heading {
     color: $background;
   }
