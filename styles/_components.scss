@@ -100,7 +100,6 @@
     @extend .btn;
     display: block;
     margin-left: auto;
-    font-size: 1rem;
   }
 }
 
@@ -188,7 +187,7 @@
 }
 
 .section--contact__form {
-  margin: 1.5em 0;
+  margin: 1.85em 0;
   @media (min-width: $md) {
     margin-top: 0;
   }
@@ -197,7 +196,7 @@
     padding-bottom: 0.5em;
     margin-bottom: 2em;
     border-bottom: 3px solid $accent;
-    width: 70%;
+    width: 85%;
     background: transparent;
     font-size: 0.8rem;
     transition: all 0.3s ease-in-out;
@@ -263,14 +262,17 @@
     right: 0;
     text-align: center;
     font-size: 0.7rem;
-    bottom: 14%;
+    bottom: 11%;
     border-radius: 5px;
 
     &.show {
       padding: 0.5em 0.75em;
     }
+    @media (min-width: $md) {
+      bottom: 12%;
+    }
     @media (min-width: $lg) {
-      bottom: 16.5%;
+      bottom: 11%;
     }
   }
 }
