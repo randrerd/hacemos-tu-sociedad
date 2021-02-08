@@ -197,6 +197,7 @@ p {
 .btn--submit-form {
   display: block;
   margin-left: auto;
+  font-size: 1rem;
 }
 
 .section--blog__entry {
@@ -340,7 +341,7 @@ p {
 .section--contact__form__upper {
   margin-bottom: 1.5em;
 }
-.section--contact__form__error-msg {
+.section--contact__form__status-msg {
   position: absolute;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -354,16 +355,16 @@ p {
   bottom: 11%;
   border-radius: 5px;
 }
-.section--contact__form__error-msg.show {
+.section--contact__form__status-msg.show {
   padding: 0.5em 0.75em;
 }
 @media (min-width: 620px) {
-  .section--contact__form__error-msg {
+  .section--contact__form__status-msg {
     bottom: 12%;
   }
 }
 @media (min-width: 995px) {
-  .section--contact__form__error-msg {
+  .section--contact__form__status-msg {
     bottom: 11%;
   }
 }

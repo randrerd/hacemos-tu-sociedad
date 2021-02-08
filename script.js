@@ -104,13 +104,13 @@ const formHandler = (() => {
   const inputElementsWrapper = document.querySelector(
     '.section--contact__form__upper'
   );
-  const errorElement = document.createElement('span');
-  errorElement.className = 'section--contact__form__error-msg';
+  const statusElement = document.createElement('span');
+  statusElement.className = 'section--contact__form__status-msg';
 
   formElement.addEventListener('submit', (e) => handleSubmit(e));
   emailInput.addEventListener('change', (e) => handleInputChange(e.target));
   phoneInput.addEventListener('change', (e) => handleInputChange(e.target));
-  inputElementsWrapper.appendChild(errorElement);
+  inputElementsWrapper.appendChild(statusElement);
 
   const emailIsValid = () => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value);
@@ -139,8 +139,8 @@ const formHandler = (() => {
           showErrMsg(input.name);
           input.elem.style.borderBottomColor = '#ce0b0b';
         } else {
-          errorElement.innerText = '';
-          errorElement.classList.remove('show');
+          statusElement.innerText = '';
+          statusElement.classList.remove('show');
           input.elem.style.borderBottomColor = '';
         }
       }
@@ -164,10 +164,18 @@ const formHandler = (() => {
         ? 'la información ingresada'
         : `el ${invalidInput} ingresado`
     }`;
-    errorElement.classList.add('show');
-    errorElement.innerText = errorMsg;
+    statusElement.classList.add('show');
+    statusElement.innerText = errorMsg;
   };
 
+  const showSuccessMsg = () => {
+    const message =
+      'Su mensaje ha sido enviado, estaremos comunicandonos pronto con usted.';
+
+    statusElement.classList.add('show');
+    statusElement.style.backgroundColor = '#025c20cc';
+    statusElement.innerText = message;
+  };
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -175,6 +183,8 @@ const formHandler = (() => {
       showErrMsg();
     } else {
       //SUBMIT VALID FORM HERE
+      //Descomentar esto una vez se haya enviado el formulario con exito
+      //showSuccessMsg();
     }
   };
 })();
