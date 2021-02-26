@@ -101,6 +101,10 @@ const formHandler = (() => {
   const formElement = document.querySelector('#form');
   const emailInput = document.querySelector('#form__email');
   const phoneInput = document.querySelector('#form__phone');
+  const msgInput = document.querySelector('#form__msg');
+  const nameInput = document.querySelector('#form__name');
+  const lastName = document.querySelector('#form__last-name');
+
   const inputElementsWrapper = document.querySelector(
     '.section--contact__form__upper'
   );
@@ -158,12 +162,19 @@ const formHandler = (() => {
     return true;
   };
 
-  const showErrMsg = (invalidInput = null) => {
-    const errorMsg = `Por favor verifique ${
-      !invalidInput
-        ? 'la información ingresada'
-        : `el ${invalidInput} ingresado`
+  const showErrMsg = (err = null) => {
+    let errorMsg = `Por favor verifique ${
+      !err ? 'la información ingresada' : `el ${err} ingresado`
     }`;
+
+    if (typeof err !== 'string') {
+      errorMsg = `Ha ocurrido un error #${err} en el servidor, pedimos disculpas`;
+    } else {
+      errorMsg = `Por favor verifique ${
+        !err ? 'la información ingresada' : `el ${err} ingresado`
+      }`;
+    }
+
     statusElement.classList.add('show');
     statusElement.innerText = errorMsg;
   };
@@ -176,6 +187,22 @@ const formHandler = (() => {
     statusElement.style.backgroundColor = '#025c20cc';
     statusElement.innerText = message;
   };
+
+  function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader('Accept', 'application/json');
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        success(xhr.response, xhr.responseType);
+      } else {
+        error(xhr.status);
+      }
+    };
+    xhr.send(data);
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -184,7 +211,10 @@ const formHandler = (() => {
     } else {
       //SUBMIT VALID FORM HERE
       //Descomentar esto una vez se haya enviado el formulario con exito
-      //showSuccessMsg();
+
+      const data = new FormData(formElement);
+      console.log(data);
+      ajax(formElement.method, form.action, data, showSuccessMsg, showErrMsg);
     }
   };
 })();
